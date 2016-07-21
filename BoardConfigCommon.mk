@@ -42,6 +42,9 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
 
+# Bionic
+MALLOC_SVELTE := true
+
 # Camera
 TARGET_USES_UNIVERSAL_LIBHWJPEG := true
 
