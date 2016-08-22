@@ -154,6 +154,14 @@
     <!-- Operating volatage for wifi radio. 0 by default-->
     <integer translatable="false" name="config_wifi_operating_voltage_mv">3600</integer>
 
+    <!-- Flag indicating whether strict threshold is used, or lenient threshold is used,
+            when evaluating RSRP for LTE antenna bar display
+           0. Strict threshold
+           1. Lenient threshold
+           2. Custom threshold
+    -->
+    <integer name="config_LTE_RSRP_threshold_type">2</integer>
+
     <!-- Control the behavior when the user long presses the home button.
             0 - Nothing
             1 - Menu key
