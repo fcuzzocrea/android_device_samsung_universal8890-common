@@ -181,6 +181,11 @@ PRODUCT_PACKAGES += \
     libsecril-client-sap \
     Stk
 
+# Copy stock APN config as lineage one seams to be quite broken and outdated
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/ril/apns-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/apns-conf.xml \
+    $(COMMON_PATH)/configs/ril/spn-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/spn-conf.xml
+
 # WiFi
 PRODUCT_PACKAGES += \
     macloader \
