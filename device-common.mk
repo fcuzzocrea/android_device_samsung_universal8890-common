@@ -171,6 +171,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# RIL
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.3-radio-service.samsung \
+    libxml2 \
+    libprotobuf-cpp-full \
+    libsecril-client \
+    modemloader \
+    libsecril-client-sap \
+    Stk
+
 # WiFi
 PRODUCT_PACKAGES += \
     macloader \
