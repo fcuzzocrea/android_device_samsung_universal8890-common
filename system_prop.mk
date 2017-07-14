@@ -68,6 +68,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so \
     vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
 
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.usb.ffs.aio_compat=1
+
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
