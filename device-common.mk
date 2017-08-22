@@ -100,6 +100,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gatekeeper.exynos8890 \
 
+# GNNS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl \
+    android.hardware.gnss@1.1-impl \
+    android.hardware.gnss@1.0-service
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
