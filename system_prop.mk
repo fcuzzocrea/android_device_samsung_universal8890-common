@@ -31,6 +31,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.init.lcd_density=560 \
     debug.hwc.winupdate=1 \
     debug.hwc.otf=1 \
+    debug.sf.latch_unsignaled=1 \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # Keystore
