@@ -1,0 +1,32 @@
+# Graphics
+/lib/hw/gatekeeper.exynos8890.so
+/lib/hw/hwcomposer.exynos5.so
+/lib/hw/keystore.exynos8890.so
+/lib/hw/memtrack.exynos5.so
+/lib/libexynosdisplay.so
+/lib/libexynosutils.so
+/lib/libexynosv4l2.so
+/lib/libfimg.so
+/lib/libhdmi.so
+/lib/libhwcutils.so
+/lib/libion_exynos.so
+/lib/libmpp.so
+/lib64/hw/gatekeeper.exynos8890.so
+/lib64/hw/hwcomposer.exynos5.so
+/lib64/hw/keystore.exynos8890.so
+/lib64/hw/memtrack.exynos5.so
+/lib64/libexynosdisplay.so
+/lib64/libexynosutils.so
+/lib64/libexynosv4l2.so
+/lib64/libfimg.so
+/lib64/libhdmi.so
+/lib64/libhwcutils.so
+/lib64/libion_exynos.so
+/lib64/libmpp.so
+
+# OMX
+/lib/omx/libOMX.Exynos.MPEG2.Decoder.so
+/lib64/omx/libOMX.Exynos.MPEG2.Decoder.so
+
+/lib/libcommonpawrapper.so
+/lib/libcurl.so

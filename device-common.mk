@@ -17,5 +17,7 @@
 LOCAL_PATH := device/samsung/universal8890-common
 
 # call Samsung LSI board support package
+ifneq ($(WITH_EXYNOS_BSP),)
 $(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
 $(call inherit-product, hardware/samsung_slsi/exynos8890/exynos8890.mk)
+endif

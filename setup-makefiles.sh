@@ -41,6 +41,16 @@ write_headers "universal8890-common"
 
 # The standard blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt true
+# The BSP blobs - we put a conditional in case the BSP
+# is actually being built
+printf '\n%s\n' 'ifeq ($(WITH_EXYNOS_BSP),)' >> "$PRODUCTMK"
+printf '\n%s\n' 'ifeq ($(WITH_EXYNOS_BSP),)' >> "$ANDROIDMK"
+
+write_makefiles "$MY_DIR"/proprietary-files-bsp.txt
+
+printf '%s\n' 'endif' >> "$PRODUCTMK"
+printf '%s\n' 'endif' >> "$ANDROIDMK"
+
 
 # Done
 write_footers
