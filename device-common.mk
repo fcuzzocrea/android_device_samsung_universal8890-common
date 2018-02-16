@@ -203,7 +203,8 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libexynoscamera_shim
+    libexynoscamera_shim \
+    libstagefright_shim
 
 # TextClassifier
 PRODUCT_PACKAGES += \

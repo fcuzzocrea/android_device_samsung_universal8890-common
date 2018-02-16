@@ -191,7 +191,9 @@ BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/lib64/libexynoscamera.so|/system/lib64/libexynoscamera_shim.so \
-    /system/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so
+    /system/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so \
+    /system/lib64/libstagefright.so|libstagefright_shim.so \
+    /system/lib/libstagefright.so|libstagefright_shim.so
 
 # Wifi
 TARGET_USES_64_BIT_BCMDHD        := true
