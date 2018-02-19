@@ -57,6 +57,9 @@ BOARD_USES_DT := true
 BOARD_USES_EXYNOS5_COMMON_GRALLOC := true
 USE_OPENGL_RENDERER := true
 
+# Extended filesystem support
+TARGET_EXFAT_DRIVER := sdfat
+
 # FIMG
 BOARD_USES_SKIA_FIMGAPI := true
 BOARD_USES_FIMGAPI_V5X := true
