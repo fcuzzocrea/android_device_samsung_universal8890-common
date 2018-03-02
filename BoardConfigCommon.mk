@@ -190,6 +190,9 @@ else
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/ramdisk/etc/fstab.samsungexynos8890
 endif
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
+
 # Renderscript
 OVERRIDE_RS_DRIVER := libRSDriverArm.so
 
