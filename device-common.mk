@@ -57,6 +57,11 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service
 
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl.8890 \
+    android.hardware.gnss@1.0-service
+
 # Graphics
 PRODUCT_PACKAGES += \
     libion_exynos \
