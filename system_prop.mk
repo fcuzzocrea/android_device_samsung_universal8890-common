@@ -37,6 +37,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
     debug.hwc.winupdate=1 \
     debug.hwc.otf=1 \
+    debug.hwui.use_buffer_age=false \
     debug.sf.latch_unsignaled=1 \
     debug.sf.disable_backpressure=1 \
     ro.surface_flinger.protected_contents=true \
