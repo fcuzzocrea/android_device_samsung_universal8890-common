@@ -26,6 +26,9 @@ TARGET_AUDIOHAL_VARIANT := samsung
 # Backlight
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 
+# Bionic
+MALLOC_SVELTE := true
+
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
@@ -33,7 +36,7 @@ TARGET_USES_64_BIT_BINDER := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_CUSTOM_BT_CONFIG := $(LOCAL_PATH)/bluetooth/libbt_vndcfg.txt
- 
+
 # Charger
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
 BOARD_CHARGER_ENABLE_SUSPEND := true
