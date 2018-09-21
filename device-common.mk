@@ -33,6 +33,20 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 # A list of dpis to select prebuilt apk, in precedence order.
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
+# Audio
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    audio.usb.default \
+    audio.r_submix.default \
+    audio.primary.universal8890_32 \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@2.0-service \
+    android.hardware.soundtrigger@2.1-impl \
+    android.hardware.soundtrigger@2.1-service \
+    libtinycompress
+
 # call Samsung LSI board support package
 ifneq ($(WITH_EXYNOS_BSP),)
 $(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
