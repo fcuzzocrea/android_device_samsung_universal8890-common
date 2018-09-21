@@ -135,6 +135,9 @@ TARGET_BOOTLOADER_BOARD_NAME := universal8890
 TARGET_SLSI_VARIANT := bsp
 TARGET_SOC := exynos8890
 
+# Renderscript
+OVERRIDE_RS_DRIVER := libRSDriverArm.so
+
 # Scaler
 BOARD_USES_DEFAULT_CSC_HW_SCALER := true
 BOARD_USES_DT := true
