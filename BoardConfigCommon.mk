@@ -138,6 +138,9 @@ BOARD_USES_SCALER_PREMUL_FMT := true
 # Thermal hal
 TARGET_THERMAL_HAL := slsi
 
+# Vendor security patch level
+VENDOR_SECURITY_PATCH := 2020-03-01
+
 # Video scaling issue workaround
 TARGET_OMX_LEGACY_RESCALING := true
 
@@ -147,3 +150,6 @@ BOARD_USES_VIRTUAL_DISPLAY_DECON_EXT_WB := false
 BOARD_USE_VIDEO_EXT_FOR_WFD_DRM := false
 BOARD_USES_VDS_BGRA8888 := true
 BOARD_VIRTUAL_DISPLAY_DISABLE_IDMA_G0 := false
+
+# Inherit from the proprietary version
+-include vendor/samsung/universal8890-common/BoardConfigVendor.mk
