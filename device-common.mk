@@ -21,3 +21,6 @@ ifneq ($(WITH_EXYNOS_BSP),)
 $(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
 $(call inherit-product, hardware/samsung_slsi/exynos8890/exynos8890.mk)
 endif
+
+# call the proprietary setup
+$(call inherit-product, vendor/samsung/universal8890-common/universal8890-common-vendor.mk)
