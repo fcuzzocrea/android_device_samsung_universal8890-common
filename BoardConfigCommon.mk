@@ -149,6 +149,21 @@ VENDOR_SECURITY_PATCH := 2020-03-01
 # Video scaling issue workaround
 TARGET_OMX_LEGACY_RESCALING := true
 
+# Wifi
+TARGET_USES_64_BIT_BCMDHD        := true
+BOARD_HAVE_SAMSUNG_WIFI          := true
+BOARD_WLAN_DEVICE                := bcmdhd
+WPA_SUPPLICANT_VERSION           := VER_0_8_X
+WPA_SUPPLICANT_USE_HIDL          := true
+BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_bcmdhd
+BOARD_HOSTAPD_DRIVER             := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_bcmdhd
+WIFI_DRIVER_FW_PATH_PARAM        := "/sys/module/dhd/parameters/firmware_path"
+WIFI_DRIVER_FW_PATH_STA          := "/system/vendor/etc/wifi/bcmdhd_sta.bin"
+WIFI_DRIVER_FW_PATH_AP           := "/system/vendor/etc/wifi/bcmdhd_apsta.bin"
+WIFI_BAND                        := 802_11_ABG
+
 # WiFiDisplay
 #BOARD_USES_VIRTUAL_DISPLAY := true - depends on platform changes
 BOARD_USES_VIRTUAL_DISPLAY_DECON_EXT_WB := false
