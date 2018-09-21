@@ -102,6 +102,9 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0 \
     android.hardware.wifi@1.0-impl
 
+# Properties
+-include $(LOCAL_PATH)/system_prop.mk
+
 # call Samsung LSI board support package
 ifneq ($(WITH_EXYNOS_BSP),)
 $(call inherit-product, hardware/samsung_slsi/exynos5/exynos5.mk)
