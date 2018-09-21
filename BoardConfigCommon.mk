@@ -19,6 +19,9 @@ LOCAL_PATH := device/samsung/universal8890-common
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
+# Audio
+TARGET_AUDIOHAL_VARIANT := samsung
+
 # Binder
 TARGET_USES_64_BIT_BINDER := true
 
