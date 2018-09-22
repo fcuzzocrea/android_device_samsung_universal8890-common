@@ -60,6 +60,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl.universal8890 \
+    init.bluetooth.rc \
     libbt-vendor
 
 # Camera
@@ -176,6 +177,14 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.samsungexynos8890 \
+    init.samsung.rc \
+    init.samsungexynos8890.rc \
+    ueventd.samsungexynos8890.rc \
+    init.samsungexynos8890.usb.rc
+
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
@@ -188,7 +197,9 @@ PRODUCT_PACKAGES += \
     libsecril-client \
     modemloader \
     libsecril-client-sap \
-    Stk
+    Stk \
+    init.baseband.rc \
+    init.baseband.sh
 
 # Copy stock APN config as lineage one seams to be quite broken and outdated
 PRODUCT_COPY_FILES += \
@@ -212,7 +223,8 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     android.hardware.wifi@1.0 \
     android.hardware.wifi@1.0-service \
-    android.hardware.wifi@1.0-impl
+    android.hardware.wifi@1.0-impl \
+    init.wifi.rc
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/wifi/creed.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/creed.conf \
