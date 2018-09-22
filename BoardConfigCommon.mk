@@ -153,6 +153,9 @@ TARGET_SOC := exynos8890
 # Properties
 TARGET_SYSTEM_PROP := $(COMMON_PATH)/system.prop
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/ramdisk/etc/fstab.samsungexynos8890
+
 # Renderscript
 BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a53
 BOARD_OVERRIDE_RS_CPU_VARIANT_64 := exynos-m1
