@@ -126,6 +126,9 @@ TARGET_BOARD_PLATFORM := exynos5
 TARGET_SLSI_VARIANT := bsp
 TARGET_BOOTLOADER_BOARD_NAME := universal8890
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/etc/fstab.samsungexynos8890
+
 # Scaler
 BOARD_USES_DEFAULT_CSC_HW_SCALER := true
 BOARD_USES_DT := true
