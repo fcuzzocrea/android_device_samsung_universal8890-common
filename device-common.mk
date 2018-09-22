@@ -83,6 +83,19 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.samsungexynos8890 \
+    init.baseband.rc \
+    init.baseband.sh \
+    init.bluetooth.rc \
+    init.samsung.rc \
+    init.samsungexynos8890.rc \
+    init.samsungexynos8890.usb.rc \
+    init.wifi.rc \
+    init.gps.rc \
+    ueventd.samsungexynos8890.rc
+
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
