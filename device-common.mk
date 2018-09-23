@@ -56,6 +56,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service
+    
+# Flat device tree for boot image
+PRODUCT_PACKAGES += \
+    dtbhtoolExynos
 
 # GPS
 PRODUCT_PACKAGES += \
