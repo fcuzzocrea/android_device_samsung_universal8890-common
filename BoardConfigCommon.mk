@@ -137,6 +137,13 @@ BOARD_USES_FIMG2D_M2M1SHOT2 := true
 BOARD_USES_SCALER_LOCAL_CID := true
 BOARD_USES_SCALER_PREMUL_FMT := true
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/lib64/libexynoscamera.so|/system/lib64/libexynoscamera_shim.so \
+    /system/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so \
+    /system/lib64/libstagefright.so|libstagefright_shim.so \
+    /system/lib/libstagefright.so|libstagefright_shim.so
+
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := system/vendor
 
