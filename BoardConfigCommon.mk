@@ -202,6 +202,14 @@ BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /system/lib64/libexynoscamera.so|/system/lib64/libexynoscamera_shim.so \
+    /system/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so \
+    /system/lib64/libstagefright.so|libstagefright_shim.so \
+    /system/lib/libstagefright.so|libstagefright_shim.so \
+    /system/vendor/lib64/libbauthserver.so|libbauthtzcommon_shim.so
+
 # Thermal hal
 TARGET_THERMAL_HAL := slsi
 
