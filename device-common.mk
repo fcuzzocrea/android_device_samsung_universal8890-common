@@ -113,6 +113,12 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/idc/Synaptics_RMI4_TouchPad_Sensor.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc \
     $(COMMON_PATH)/configs/idc/sec_touchscreen.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/sec_touchscreen.idc
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    keystore.exynos8890 \
+    android.hardware.keymaster@3.0-impl \
+    android.hardware.keymaster@3.0-service
+
 # Media
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs.xml \
