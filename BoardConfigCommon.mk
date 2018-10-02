@@ -61,7 +61,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
 
 # Camera
 TARGET_USES_UNIVERSAL_LIBHWJPEG := true
-TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_8890
+TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := //$(COMMON_PATH):libcamera_parameters_8890
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
@@ -230,6 +230,9 @@ TARGET_LD_SHIM_LIBS := \
     /system/lib64/libstagefright.so|libstagefright_shim.so \
     /system/lib/libstagefright.so|libstagefright_shim.so \
     /system/vendor/lib64/libbauthserver.so|libbauthtzcommon_shim.so
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 
 # Thermal hal
 TARGET_THERMAL_HAL := slsi
