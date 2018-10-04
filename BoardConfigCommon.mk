@@ -148,6 +148,10 @@ BOARD_USES_FIMG2D_M2M1SHOT2 := true
 BOARD_USES_SCALER_LOCAL_CID := true
 BOARD_USES_SCALER_PREMUL_FMT := true
 
+# SELinux
+# BOARD_SEPOLICY_DIRS += device/samsung/universal8890-common/sepolicy 
+# BOARD_SEPOLICY_VERS := $(PLATFORM_SDK_VERSION).0
+
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/lib64/libexynoscamera.so|/system/lib64/libexynoscamera_shim.so \
