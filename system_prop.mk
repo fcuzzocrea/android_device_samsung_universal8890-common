@@ -80,4 +80,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	
 # WiFi Display
 PRODUCT_PROPERTY_OVERRIDES += \
+    wifi.direct.interface=p2p-dev-wlan0 \
     persist.debug.wfd.enable=1
