@@ -105,6 +105,11 @@ PRODUCT_PACKAGES += \
     libfimg \
     libhwc2on1adapter
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.0-impl \
+    android.hardware.health@2.0-service
+
 # IPv6
 PRODUCT_PACKAGES += \
     ebtables \
