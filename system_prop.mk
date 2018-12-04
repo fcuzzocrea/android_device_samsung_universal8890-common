@@ -16,6 +16,7 @@
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.media_vol_steps=25 \
     ro.config.systemaudiodebug=arizona \
     af.fast_track_multiplier=1 \
     audio_hal.force_voice_config=wide \
