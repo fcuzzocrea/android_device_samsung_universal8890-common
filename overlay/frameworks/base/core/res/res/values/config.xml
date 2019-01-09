@@ -1227,4 +1227,7 @@
         <!-- rotation: 180 (reverse)    --> <item>-25</item> <item>60</item>
         <!-- rotation: 270 (rotate CW)  --> <item>-25</item> <item>65</item>
     </integer-array>
+    
+    <!-- Disable rounded corners on windows to improve graphics performance -->
+    <bool name="config_supportsRoundedCornersOnWindows">false</bool>
 </resources>
