@@ -35,8 +35,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
-    ro.sf.lcd_density=560 \
-    ro.sf.init.lcd_density=560 \
     debug.hwc.winupdate=1 \
     debug.hwc.otf=1 \
     debug.sf.latch_unsignaled=1 \
