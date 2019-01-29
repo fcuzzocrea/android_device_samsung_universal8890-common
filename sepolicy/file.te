@@ -30,3 +30,6 @@ type sysfs_light_writable, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_wifi_writable, fs_type, sysfs_type, mlstrustedobject;
 
 allow sysfs_type tmpfs:filesystem associate;
+
+### data types
+type display_vendor_data_file, file_type, data_file_type;
