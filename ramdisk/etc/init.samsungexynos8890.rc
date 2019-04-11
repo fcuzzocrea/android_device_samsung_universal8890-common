@@ -406,6 +406,9 @@ on fs
     chown system system /sys/class/lcd/panel/adaptive_control
     chmod 0660 /sys/class/lcd/panel/adaptive_control
 
+# Permission for LCD flickerfree
+    chown system system /sys/class/lcd/panel/smart_on
+
 # Permissions for LCD
     chown system radio /sys/class/lcd/panel/manufacture_code
     chown system radio /sys/class/lcd/panel/lcd_type
