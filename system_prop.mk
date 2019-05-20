@@ -35,6 +35,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=1 \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.stagefright.ccodec=0
+
 # MMS
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.mms_data_profile=5 \
