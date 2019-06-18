@@ -113,6 +113,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.biometrics.fingerprint@2.1-service.samsung
 
+# FlipFlap
+PRODUCT_PACKAGES += \
+    FlipFlap
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     gatekeeper.exynos8890 \
