@@ -126,6 +126,7 @@ PRODUCT_PACKAGES += \
     init.samsung.rc \
     init.samsungexynos8890.rc \
     init.samsungexynos8890.usb.rc \
+    init.recovery.samsungexynos8890.rc \
     init.wifi.rc \
     init.gps.rc \
     ueventd.samsungexynos8890.rc
