@@ -230,6 +230,7 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.samsungexynos8890 \
+    init.recovery.samsungexynos8890.rc \
     init.samsung.rc \
     init.samsungexynos8890.rc \
     init.samsungexynos8890.usb.rc \
