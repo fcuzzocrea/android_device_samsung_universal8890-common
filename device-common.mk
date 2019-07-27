@@ -227,7 +227,8 @@ PRODUCT_PACKAGES += \
     init.samsung.rc \
     init.samsungexynos8890.rc \
     ueventd.samsungexynos8890.rc \
-    init.samsungexynos8890.usb.rc
+    init.samsungexynos8890.usb.rc \
+    init.recovery.samsungexynos8890.rc
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \
