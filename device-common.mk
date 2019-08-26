@@ -311,6 +311,10 @@ PRODUCT_PACKAGES += \
     libexynoscamera_shim \
     libstagefright_shim
 
+# Stagefright
+PRODUCT_PACKAGES += \
+    libgui_vendor
+
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
