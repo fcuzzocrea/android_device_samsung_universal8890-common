@@ -49,6 +49,7 @@ BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/bluetooth/libbt_vndcfg.txt
 
 # Camera
 TARGET_USES_UNIVERSAL_LIBHWJPEG := true
+TARGET_SPECIFIC_CAMERA_PARAMETER_LIBRARY := libcamera_parameters_8890
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
