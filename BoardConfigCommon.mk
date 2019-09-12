@@ -172,6 +172,10 @@ else
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/etc/fstab.samsungexynos8890
 endif
 
+# Renderscript
+BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a53
+BOARD_OVERRIDE_RS_CPU_VARIANT_64 := exynos-m1
+
 # Scaler
 BOARD_USES_DEFAULT_CSC_HW_SCALER := true
 BOARD_USES_DT := true
