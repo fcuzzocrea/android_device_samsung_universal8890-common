@@ -182,6 +182,12 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(COMMON_PATH)/configs/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf
 
+# Offmode charger
+# Use LineageOS images if available, aosp ones otherwise
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    lineage_charger_res_images
+
 # Permissions
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/permissions/com.samsung.permission.HRM_EXT.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.samsung.permission.HRM_EXT.xml \
