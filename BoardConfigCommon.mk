@@ -171,6 +171,9 @@ TARGET_LD_SHIM_LIBS := \
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := system/vendor
 
+# Video scaling issue workaround
+TARGET_OMX_LEGACY_RESCALING := true
+
 # Wifi
 TARGET_USES_64_BIT_BCMDHD        := true
 BOARD_HAVE_SAMSUNG_WIFI          := true
