@@ -114,6 +114,12 @@ PRODUCT_COPY_FILES += \
 # Memory
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl
+    
+# Offmode charger
+# Use LineageOS images if available, aosp ones otherwise
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    lineage_charger_res_images
 
 # Power
 PRODUCT_PACKAGES += \
@@ -165,7 +171,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
-	
+    
 # Shims
 PRODUCT_PACKAGES += \
     libexynoscamera_shim \
