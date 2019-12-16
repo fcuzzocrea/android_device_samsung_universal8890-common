@@ -120,6 +120,9 @@ GREEN_LED_PATH := "/sys/class/leds/led_g/brightness"
 BLUE_LED_PATH := "/sys/class/leds/led_b/brightness"
 BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 
+# LMKD stats logging
+TARGET_LMKD_STATS_LOG := true
+
 # OpenMAX H/W en/decoder
 BOARD_HAVE_CID_SUPPORT := true
 BOARD_USE_MFC_MEDIA := true
