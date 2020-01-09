@@ -17,7 +17,9 @@
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
-    audio_hal.force_voice_config=wide
+    audio_hal.force_voice_config=wide \
+    debug.stagefright.omx_default_rank.sw-audio=1 \
+    debug.stagefright.omx_default_rank=0    
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
