@@ -26,6 +26,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bt.bdaddr_path="/efs/bluetooth/bt_addr" \
     qcom.bluetooth.soc=rome
 
+# Fastbootd
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.fastbootd.available=true
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bq.gpu_to_cpu_unsupported=1 \
