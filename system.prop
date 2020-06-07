@@ -1,8 +1,10 @@
-# read DS/SS property
+# Read DS/SS property
 import /efs/factory.prop
 
-# boot device
+# Boot device
 ro.boot.bootdevice=155a0000.ufs
 
-# HAL1 hack
-#vendor.camera.hal1.packagelist=com.whatsapp,com.instagram.android,com.snapchat.android,com.facebook.orca
+#Cmc properties
+ro.cmc.device_type=pd
+ro.cmc.version=2.0
+

@@ -16,33 +16,41 @@
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.config.systemaudiodebug=arizona \
     af.fast_track_multiplier=1 \
     audio_hal.force_voice_config=wide \
     debug.stagefright.omx_default_rank.sw-audio=1 \
-    debug.stagefright.omx_default_rank=0    
+    debug.stagefright.omx_default_rank=0
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bt.bdaddr_path="/efs/bluetooth/bt_addr" \
-    qcom.bluetooth.soc=rome
+    ro.bt.bdaddr_path="/efs/bluetooth/bt_addr"
 
 # Fastbootd
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fastbootd.available=true
 
+# Factory Reset Protection
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.frp.pst=/dev/block/persistent
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bq.gpu_to_cpu_unsupported=1 \
     ro.opengles.version=196610 \
-    ro.sf.lcd_density=560 \
+    ro.sf.lcd_density=420 \
+    ro.sf.init.lcd_density=560 \
     debug.hwc.winupdate=1 \
     debug.hwc.otf=1 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.disable_backpressure=1 \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
-# LKMD
+# Keystore
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore=mdfpp
+
+# LKMD
+PRODUCT_PRODUCT_PROPERTIES += \
     ro.lmk.log_stats=true \
     ro.lmk.low=1001 \
     ro.lmk.medium=800 \
@@ -58,10 +66,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.ccodec=0
 
-# MMS
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.mms_data_profile=5 \
-
 # Network
 # Define default initial receive window size in segments.
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -74,24 +78,32 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.add_power_save=1 \
-    persist.radio.apm_sim_not_pwdn=1 \
-    ro.telephony.default_network=9 \
-    ro.ril.gprsclass=10 \
-    ro.ril.hsxpa=1 \
-    persist.data.netmgrd.qos.enable=false \
-    ro.use_data_netmgrd=false \
-    ro.ril.telephony.mqanelements=6 \
-    telephony.lteOnGsmDevice=1 \
+    ro.hdcp2.rx=tz \
+    keyguard.no_require_sim=true \
     telephony.lteOnCdmaDevice=0 \
-    ro.telephony.get_imsi_from_sim=true \
-    ro.ril.force_eri_from_xml=true \
-    net.tethering.noprovisioning=true \
-    ro.debug_level=0x494d \
-    rild.libpath=/system/lib64/libsec-ril.so \
-    rild.libargs=-d /dev/umts_ipc0 \
     vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so \
     vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
+
+# Security
+PRODUCT_PROPERTY_OVERRIDES += \
+    security.ASKS.policy_version=00000000 \
+    security.mdf.result=None \
+    security.mdf=None \
+    ro.security.mdf.ux=Enabled \
+    ro.security.mdf.ver=3.1 \
+    ro.security.wlan.ver=1.0 \
+    ro.security.wlan.release=2 \
+    ro.security.mdf.release=4 \
+    ro.security.fips.ux=Enabled \
+    ro.security.fips_bssl.ver=1.3 \
+    ro.security.fips_skc.ver=1.7 \
+    ro.security.fips_scrypto.ver=1.0 \
+    ro.security.vpnpp.ver=2.1 \
+    ro.security.vpnpp.release=2.0
+
+# SLSI
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.slsi_platform=1
 
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -99,9 +111,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.interface=wlan0
+    wifi.direct.interface=p2p-dev-wlan0 \
 	
 # WiFi Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.direct.interface=p2p-dev-wlan0 \
-    persist.debug.wfd.enable=1
+    persist.debug.wfd.enable=1 \
+    ro.vendor.wfdsupport=1
