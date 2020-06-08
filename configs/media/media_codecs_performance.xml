@@ -26,7 +26,7 @@
             <Limit name="measured-frame-rate-176x144" range="200-440" />
             <Limit name="measured-frame-rate-352x288" range="150-330" />
             <Limit name="measured-frame-rate-704x576" range="100-220" />
-        </MediaCodec>
+        </MediaCodec>    
         <MediaCodec name="OMX.Exynos.MPEG4.Encoder" type="video/mp4v-es" update="true" >
             <Limit name="measured-frame-rate-176x144" range="200-440" />
             <Limit name="measured-frame-rate-352x288" range="150-330" />
