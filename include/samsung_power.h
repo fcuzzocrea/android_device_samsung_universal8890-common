@@ -19,6 +19,13 @@
 #define SAMSUNG_POWER_H
 
 /*
+ * Board specific defines
+ *
+ */
+
+#define ALLOW_NONINTERACTIVE_SCREENON 1
+
+/*
  * Board specific nodes
  *
  * If your kernel exposes these controls in another place, you can either
