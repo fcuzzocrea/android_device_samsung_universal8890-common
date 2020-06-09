@@ -245,9 +245,6 @@ PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 # Thermal hal
 TARGET_THERMAL_HAL := slsi
 
-# Vendor security patch level
-VENDOR_SECURITY_PATCH := 2020-03-01
-
 # Video scaling issue workaround
 TARGET_OMX_LEGACY_RESCALING := true
 

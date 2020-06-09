@@ -127,7 +127,8 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-    gatekeeper.exynos8890 \
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0-impl
 
 # GNNS
 PRODUCT_PACKAGES += \
@@ -135,6 +136,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.1-impl \
     android.hardware.gnss@1.0-service
 
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/configs/gps/gps_debug.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps_debug.conf
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
@@ -170,11 +173,12 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/idc/Synaptics_RMI4_TouchPad_Sensor.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc \
     $(COMMON_PATH)/configs/idc/sec_touchscreen.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/sec_touchscreen.idc
 
-# Keymaster
+# keymaster
 PRODUCT_PACKAGES += \
-    keystore.exynos8890 \
+    android.hardware.keymaster@3.0 \
+    android.hardware.keymaster@3.0-service \
     android.hardware.keymaster@3.0-impl \
-    android.hardware.keymaster@3.0-service
+    libkeymaster3device
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -203,24 +207,30 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    com.android.nfc_extras \
-    Tag \
+    libnfc-nci \
+    libnfc_nci_jni \
     NfcNci \
-    android.hardware.nfc@1.0-impl
+    Tag \
+    com.android.nfc_extras \
+    libclang_rt.ubsan_standalone-aarch64-android
+    #android.hardware.nfc@1.1-impl
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/nfc/libnfc-sec-hal.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-sec-hal.conf \
-    $(COMMON_PATH)/configs/nfc/libnfc-sec.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-sec.conf \
+    $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
+    $(COMMON_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
     $(COMMON_PATH)/configs/nfc/nfcee_access.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/nfcee_access.xml \
-    $(COMMON_PATH)/configs/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-brcm.conf \
-    $(COMMON_PATH)/configs/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
-    $(COMMON_PATH)/configs/nfc/libnfc-brcm.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf
+    $(COMMON_PATH)/configs/nfc/nfc_key:$(TARGET_COPY_OUT_SYSTEM)/etc/nfc_key
 
 # Offmode charger
 # Use LineageOS images if available, aosp ones otherwise
 PRODUCT_PACKAGES += \
     charger_res_images \
     lineage_charger_res_images
+
+# OMX
+PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-impl
+    android.hardware.media.omx@1.0-service
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -316,7 +326,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    thermal.universal8890
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service
 
 # Touch features
 PRODUCT_PACKAGES += \
@@ -338,8 +349,6 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    macloader \
-    wifiloader \
     hostapd \
     wificond \
     wifilogd \
