@@ -213,7 +213,6 @@ etc/mtu-conf.xml
 vendor/bin/cbd
 vendor/bin/hw/rild
 vendor/bin/hw/vendor.samsung.hardware.radio.configsvc@1.0-service
-vendor/etc/plmn_se13.bin
 vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/init/vendor.samsung.hardware.radio.configsvc@1.0-service.rc
