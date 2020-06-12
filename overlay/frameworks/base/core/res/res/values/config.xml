@@ -135,6 +135,9 @@
         <item>-44</item>
     </integer-array>
 
+    <!-- Is the device capable of hot swapping an ICC Card -->
+    <bool name="config_hotswapCapable">true</bool>
+
     <!-- Config determines whether to update phone object when voice registration
          state changes. Voice radio tech change will always trigger an update of
          phone object irrespective of this config -->
@@ -157,6 +160,9 @@
     
     <!-- Boolean indicating if current platform supports HFP inband ringing -->
     <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
+
+   <!-- Operating volatage for bluetooth controller. 0 by default-->
+   <integer translatable="false" name="config_bluetooth_operating_voltage_mv">4</integer>
 
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
