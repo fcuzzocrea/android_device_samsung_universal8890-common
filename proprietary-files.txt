@@ -25,7 +25,7 @@ etc/firmware/moon-dsp4-rx-anc-nbwb.wmfw
 etc/firmware/moon-dsp5-dsm.bin
 etc/firmware/moon-dsp5-dsm.wmfw
 etc/firmware/moon-dsp6-ez2-control.wmfw
-etc/firmware/moon-dsp6-lpsd-control.bi
+etc/firmware/moon-dsp6-lpsd-control.bin
 
 # Bluetooth
 vendor/firmware/bcm4359C0_murata.hcd
@@ -275,7 +275,7 @@ lib/libExynosHWCService.so
 lib/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
 lib64/libExynosHWCService.so
 lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
-vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-services
+vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service
 vendor/etc/init/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service.rc
 vendor/lib/libhwc2on1adapter.so
 vendor/lib/libhwc2onfbadapter.so
