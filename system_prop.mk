@@ -110,3 +110,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # WiFi Display
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.wfdsupport=1
+
+# Zygote
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.runtime_native.usap_pool_enabled=true
