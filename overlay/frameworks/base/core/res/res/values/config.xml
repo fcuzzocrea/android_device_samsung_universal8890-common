@@ -1039,14 +1039,6 @@
         <item>500</item>
         <item>600</item>
     </integer-array>
-    
-    <!-- Vibrator pattern for feedback about a long screen/key press -->
-    <integer-array name="config_longPressVibePattern">
-        <item>0</item>
-        <item>1</item>
-        <item>20</item>
-        <item>21</item>
-    </integer-array>
 
     <!-- Doze (Ambient display) -->
     <string name="config_dozeComponent">com.android.systemui/com.android.systemui.doze.DozeService</string>
@@ -1089,21 +1081,6 @@
          to maximize power savings but not all devices support it.
          Refer to autosuspend.h for details.
     -->    
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
-
-    <!-- Power Management: Specifies whether to decouple the interactive state of the
-         device from the display on/off state.
-         When false, setInteractive(..., true) will be called before the display is turned on
-         and setInteractive(..., false) will be called after the display is turned off.
-         This mode provides best compatibility for devices that expect the interactive
-         state to be tied to the display state.
-         When true, setInteractive(...) will be called independently of whether the display
-         is being turned on or off.  This mode enables the power manager to reduce
-         clocks and disable the touch controller while the display is on.
-         This resource should be set to "true" when a doze component has been specified
-         to maximize power savings but not all devices support it.
-         Refer to power.h for details.
-    -->
     <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
 
     <!-- Set this to true to enable the platform's auto-power-save modes like doze and
@@ -1228,11 +1205,6 @@
     
     <!--  Define Google play service package for FRP-->
     <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
-    
-    <!-- Config determines whether to update phone object when voice registration
-    state changes. Voice radio tech change will always trigger an update of
-    phone object irrespective of this config -->
-    <bool name="config_switch_phone_on_voice_reg_state_change">true</bool>
 
     <!-- If true, the screen can be rotated via the accelerometer in all 4
          rotations as the default behavior. -->
