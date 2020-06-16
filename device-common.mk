@@ -138,15 +138,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/gps/gps_debug.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps_debug.conf
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
-    android.hardware.graphics.mapper@2.0-impl-2.1 \
-    libion_exynos \
-    libfimg \
-    libhwc2on1adapter
+    android.hardware.graphics.mapper@2.0-impl-2.1
 
 # Health
 PRODUCT_PACKAGES += \
@@ -173,7 +171,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/idc/Synaptics_RMI4_TouchPad_Sensor.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc \
     $(COMMON_PATH)/configs/idc/sec_touchscreen.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/sec_touchscreen.idc
 
-# keymaster
+# Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0 \
     android.hardware.keymaster@3.0-service \
@@ -213,7 +211,6 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras \
     libclang_rt.ubsan_standalone-aarch64-android
-    #android.hardware.nfc@1.1-impl
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
@@ -316,9 +313,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libexynoscamera_shim \
-    libstagefright_shim \
-    libbauthtzcommon_shim
+    libexynoscamera_shim
 
 # Stagefright
 PRODUCT_PACKAGES += \

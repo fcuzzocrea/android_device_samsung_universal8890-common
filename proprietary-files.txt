@@ -32,19 +32,31 @@ vendor/firmware/bcm4359C0_murata.hcd
 vendor/firmware/bcm4359C0_semco.hcd
 
 # Camera
+lib/libblurdetection.so
+lib/libblurdetection_interface.so
 lib/libexynoscamera.so
 lib/libexynoscamera3.so
 lib/libexynosgscaler.so
 lib/libexynosscaler.so
+lib/libflashedlls_interface.so
 lib/libhwjpeg.so
+lib/libimage_flashed_lls.so
+lib/libsmartfocusengine.so
+lib/libsmartfocus_interface.so
 lib/libuniapi.so
 lib/libuniplugin.so
 lib/hw/camera.exynos5.so
+lib64/libblurdetection.so
+lib64/libblurdetection_interface.so
 lib64/libexynoscamera.so
 lib64/libexynoscamera3.so
 lib64/libexynosgscaler.so
 lib64/libexynosscaler.so
+lib64/libflashedlls_interface.so
 lib64/libhwjpeg.so
+lib64/libimage_flashed_lls.so
+lib64/libsmartfocusengine.so
+lib64/libsmartfocus_interface.so
 lib64/libuniapi.so
 lib64/libuniplugin.so
 lib64/hw/camera.exynos5.so
@@ -52,18 +64,6 @@ vendor/lib/libOpenCv.camera.samsung.so
 vendor/lib64/libOpenCv.camera.samsung.so
 vendor/lib/libexynosv4l2.so
 vendor/lib64/libexynosv4l2.so
-lib/libblurdetection_interface.so
-lib/libflashedlls_interface.so
-lib/libsmartfocus_interface.so
-lib64/libblurdetection_interface.so
-lib64/libflashedlls_interface.so
-lib64/libsmartfocus_interface.so
-lib/libsmartfocusengine.so
-lib/libblurdetection.so
-lib64/libsmartfocusengine.so
-lib64/libblurdetection.so
-lib/libimage_flashed_lls.so
-lib64/libimage_flashed_lls.so
 
 # Camera Firmware
 vendor/firmware/companion_2l1_master_setfile.bin
@@ -121,8 +121,12 @@ vendor/lib/hw/gatekeeper.exynos8890.so
 vendor/lib64/hw/gatekeeper.exynos8890.so
 
 # GNSS
+etc/floating_feature.xml
+etc/init/init.gpscommon.rc
 lib/libfloatingfeature.so
+lib/vendor.samsung.hardware.gnss@1.0.so
 lib64/libfloatingfeature.so
+lib64/vendor.samsung.hardware.gnss@1.0.so
 vendor/bin/hw/gpsd
 vendor/bin/hw/vendor.samsung.hardware.gnss@1.0-service
 vendor/etc/init/init.gps.rc
@@ -130,40 +134,36 @@ vendor/etc/init/vendor.samsung.hardware.gnss@1.0-service.rc
 vendor/etc/gnss/gps.cer
 vendor/etc/gnss/gps.xml
 vendor/lib/libwrappergps.so
-lib/vendor.samsung.hardware.gnss@1.0.so
 vendor/lib64/libflicker.so
 vendor/lib64/libwrappergps.so
-lib64/vendor.samsung.hardware.gnss@1.0.so
 vendor/lib64/hw/android.hardware.gnss@1.1-impl.so
 vendor/lib64/hw/gps.default.so
 vendor/lib64/hw/vendor.samsung.hardware.gnss@1.0-impl.so
-etc/floating_feature.xml
-etc/init/init.gpscommon.rc
 
 # Graphics
-vendor/lib/libcsc.so
-vendor/lib64/libcsc.so
-vendor/lib/egl/libGLES_mali.so
-vendor/lib64/egl/libGLES_mali.so
 lib/libexynosdisplay.so
-vendor/lib/libexynosutils.so
 lib/libhdmi.so
+lib64/libexynosdisplay.so
+lib64/libhdmi.so
+vendor/lib/libcsc.so
+vendor/lib/libexynosutils.so
 vendor/lib/libion_exynos.so
 vendor/lib/libmpp.so
-lib64/libhdmi.so
-vendor/lib64/libion_exynos.so
-lib64/libmpp.so
-lib64/libexynosdisplay.so
+vendor/lib/egl/libGLES_mali.so
+vendor/lib64/libcsc.so
 vendor/lib64/libexynosutils.so
+vendor/lib64/libion_exynos.so
+vendor/lib64/libmpp.so
+vendor/lib64/egl/libGLES_mali.so
 
 # Keymaster
 lib/libskeymaster.so
 lib64/libskeymaster.so
-vendor/lib64/hw/keystore.mdfpp.so
 vendor/lib/libskeymaster3device.so
 vendor/lib64/libkeymaster_mdfpp.so
 vendor/lib64/libkeymaster_helper.so
 vendor/lib64/libskeymaster3device.so
+vendor/lib64/hw/keystore.mdfpp.so
 
 # Memtrack
 vendor/lib/hw/memtrack.universal8890.so
@@ -218,6 +218,17 @@ lib64/omx/libOMX.Exynos.WMV.Decoder.so
 
 # Radio - RIL
 etc/mtu-conf.xml
+lib/libsecnativefeature.so
+lib/vendor.samsung.hardware.radio.channel@1.0.so
+lib/vendor.samsung.hardware.radio.secbridge@1.0.so
+lib/vendor.samsung.hardware.radio.sechook@1.0.so
+lib/vendor.samsung.hardware.radio@1.2.so
+lib64/libsecnativefeature.so
+lib64/vendor.samsung.hardware.radio.channel@1.0.so
+lib64/vendor.samsung.hardware.radio.configsvc@1.0.so
+lib64/vendor.samsung.hardware.radio.secbridge@1.0.so
+lib64/vendor.samsung.hardware.radio.sechook@1.0.so
+lib64/vendor.samsung.hardware.radio@1.2.so
 vendor/bin/cbd
 vendor/bin/hw/rild
 vendor/bin/hw/vendor.samsung.hardware.radio.configsvc@1.0-service
@@ -227,37 +238,26 @@ vendor/etc/init/vendor.samsung.hardware.radio.configsvc@1.0-service.rc
 vendor/lib/libreference-ril.so
 vendor/lib/libril.so
 vendor/lib/librilutils.so
-lib/libsecnativefeature.so
 vendor/lib/libsec-ril-dsds.so
 vendor/lib/libsec-ril.so
 vendor/lib/libvndsecril-client.so
-lib/vendor.samsung.hardware.radio.channel@1.0.so
-lib/vendor.samsung.hardware.radio.secbridge@1.0.so
-lib/vendor.samsung.hardware.radio.sechook@1.0.so
-lib/vendor.samsung.hardware.radio@1.2.so
 vendor/lib64/libreference-ril.so
 vendor/lib64/libril.so
 vendor/lib64/librilutils.so
-lib64/libsecnativefeature.so
 vendor/lib64/libsec-ril-dsds.so
 vendor/lib64/libsec-ril.so
 vendor/lib64/libvndsecril-client.so
-lib64/vendor.samsung.hardware.radio.channel@1.0.so
-lib64/vendor.samsung.hardware.radio.configsvc@1.0.so
-lib64/vendor.samsung.hardware.radio.secbridge@1.0.so
-lib64/vendor.samsung.hardware.radio.sechook@1.0.so
-lib64/vendor.samsung.hardware.radio@1.2.so
 
 # Sensors
+lib/libsensorlistener.so
+lib64/libhr.so
+lib64/libsensorlistener.so
 vendor/bin/hw/lhd
 vendor/etc/sensor/lhd.conf
 vendor/etc/sensors/hals.conf
-lib/libsensorlistener.so
 vendor/lib/sensors.bio.so
 vendor/lib/sensors.grip.so
 vendor/lib/sensors.sensorhub.so
-lib64/libhr.so
-lib64/libsensorlistener.so
 vendor/lib64/sensors.bio.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.sensorhub.so
@@ -268,23 +268,25 @@ vendor/lib/libstagefright_foundation.so
 vendor/lib/libstagefright_xmlparser.so
 vendor/lib/libstagefright_omx_utils.so
 vendor/lib/libstagefright_omx_vendor.so
+vendor/lib/libstagefright_soft_rawdec.so
 vendor/lib/libstagefright_soft_g711dec.so
+vendor/lib/libstagefright_soft_vorbisdec.so
 
 # Surface Composer
-lib/hw/gralloc.exynos5.so
-lib/libGrallocWrapper.so
-lib/libvirtualdisplay.so
-lib64/libvirtualdisplay.so
-lib64/libGrallocWrapper.so
-lib64/hw/gralloc.exynos5.so
-lib/hw/hwcomposer.exynos5.so
-lib/libhwcutils.so
-lib64/hw/hwcomposer.exynos5.so
-lib64/libhwcutils.so
 lib/libExynosHWCService.so
+lib/libGrallocWrapper.so
+lib/libhwcutils.so
+lib/libvirtualdisplay.so
 lib/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
+lib/hw/gralloc.exynos5.so
+lib/hw/hwcomposer.exynos5.so
 lib64/libExynosHWCService.so
+lib64/libhwcutils.so
+lib64/libGrallocWrapper.so
+lib64/libvirtualdisplay.so
 lib64/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0.so
+lib64/hw/gralloc.exynos5.so
+lib64/hw/hwcomposer.exynos5.so
 vendor/bin/hw/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service
 vendor/etc/init/vendor.samsung_slsi.hardware.ExynosHWCServiceTW@1.0-service.rc
 vendor/lib/libhwc2on1adapter.so
