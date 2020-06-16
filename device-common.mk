@@ -320,6 +320,10 @@ PRODUCT_PACKAGES += \
     libstagefright_shim \
     libbauthtzcommon_shim
 
+# Stagefright
+PRODUCT_PACKAGES += \
+    libgui_vendor
+
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1

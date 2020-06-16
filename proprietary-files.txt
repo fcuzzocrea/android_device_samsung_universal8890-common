@@ -52,6 +52,18 @@ vendor/lib/libOpenCv.camera.samsung.so
 vendor/lib64/libOpenCv.camera.samsung.so
 vendor/lib/libexynosv4l2.so
 vendor/lib64/libexynosv4l2.so
+lib/libblurdetection_interface.so
+lib/libflashedlls_interface.so
+lib/libsmartfocus_interface.so
+lib64/libblurdetection_interface.so
+lib64/libflashedlls_interface.so
+lib64/libsmartfocus_interface.so
+lib/libsmartfocusengine.so
+lib/libblurdetection.so
+lib64/libsmartfocusengine.so
+lib64/libblurdetection.so
+lib/libimage_flashed_lls.so
+lib64/libimage_flashed_lls.so
 
 # Camera Firmware
 vendor/firmware/companion_2l1_master_setfile.bin
@@ -157,10 +169,6 @@ vendor/lib64/libskeymaster3device.so
 vendor/lib/hw/memtrack.universal8890.so
 vendor/lib64/hw/memtrack.universal8890.so
 
-# Misc
-vendor/lib/libcommonpawrapper.so
-lib/libcurl.so
-
 # Mobicore
 vendor/bin/mcDriverDaemon
 vendor/lib/libMcClient.so
@@ -265,6 +273,8 @@ vendor/lib/libstagefright_soft_g711dec.so
 # Surface Composer
 lib/hw/gralloc.exynos5.so
 lib/libGrallocWrapper.so
+lib/libvirtualdisplay.so
+lib64/libvirtualdisplay.so
 lib64/libGrallocWrapper.so
 lib64/hw/gralloc.exynos5.so
 lib/hw/hwcomposer.exynos5.so
