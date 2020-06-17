@@ -1,8 +1,8 @@
 import init.samsungexynos8890.usb.rc
 import init.baseband.rc
-import init.carrier.rc
+#import init.carrier.rc
 import init.wifi.rc
-import init.gps.rc
+#import init.gps.rc
 import init.fac.rc
 import init.exynos8890_fac.rc
 import init.remove_recovery.rc
@@ -208,6 +208,9 @@ on post-fs
     setrlimit 8 67108864 67108864
 
 on post-fs-data
+    # avoid USB crash
+    setprop persist.adb.nonblocking_ffs 0
+    setprop ro.adb.nonblocking_ffs 0
     mkdir /data/media 0770 media_rw media_rw
     setprop vold.post_fs_data_done 1
 
@@ -684,6 +687,8 @@ on fs
     chown system system /sys/class/lcd/panel/SVC_OCTA
     chown system system /sys/class/lcd/panel/dpui
     chown system system /sys/class/lcd/panel/dpui_dbg
+    chown system system /sys/class/lcd/panel/smart_on
+    chown system system /sys/android_touch/doubletap2wake
 
 # Permissions for MDNIE
     chown system media_rw /sys/class/mdnie/mdnie/mode
@@ -716,6 +721,9 @@ on fs
 # Permissions for S.LSI ESE
     chmod 0660 /dev/p3
     chown system system /dev/p3
+
+# Restore the previous batt_capacity_max (if it exists)
+    copy /efs/Battery/prev_batt_capacity_max /sys/class/power_supply/battery/batt_capacity_max
 
 # Fingerprint
     mkdir /dev/validity 0770 system system
@@ -948,7 +956,7 @@ service fingerprintd /system/bin/fingerprintd
     chmod 0644 /factory/wv.keys
 
 # MobiCore startup
-# service mobicore /system/bin/mcDriverDaemon -r /system/app/020a0000000000000000000000000000.drbin -r /system/app/mcRegistry/FFFFFFFFD00000000000000000000016.tlbin
+# service mobicore /system/vendor/bin/mcDriverDaemon -r /system/vendor/app/020a0000000000000000000000000000.drbin -r /system/vendor/app/mcRegistry/FFFFFFFFD00000000000000000000016.tlbin
 #     user drmrpc
 #     group drmrpc
 #     class core
@@ -959,6 +967,10 @@ service fingerprintd /system/bin/fingerprintd
 #	group drmrpc
 #	class main
 
+# Apexy shit
+on property:apexd.status=ready
+    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
+
 # umount service
 service umount_service /system/bin/umount -D /preload
     disabled
@@ -967,7 +979,7 @@ service umount_service /system/bin/umount -D /preload
 
 # Support Preload install apks
 on property:persist.sys.storage_preload=1
-    mount ext4 /dev/block/platform/155a0000.ufs/by-name/HIDDEN /preload nosuid nodev ro barrier=1
+    #mount ext4 /dev/block/platform/155a0000.ufs/by-name/HIDDEN /preload nosuid nodev ro barrier=1
     setprop storage.preload.complete 1
 
 on property:persist.sys.storage_preload=0
@@ -983,21 +995,33 @@ on property:ro.debuggable=1
     write /sys/module/kgdboc/parameters/kgdboc ttyFIQ1
     write /sys/module/fiq_debugger/parameters/kgdb_enable 1
 
-# LPM
-on property:ro.bootmode=charger
-    mount ext4 /dev/block/platform/155a0000.ufs/by-name/SYSTEM /system wait ro
+on charger
+# Set cpu governor to powersave while in charging mode
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor powersave
+    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor powersave
+    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor powersave
+    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor powersave
 
-on property:ro.bootmode=charger
-    wait /dev/block/platform/155a0000.ufs/by-name/EFS
-    mount ext4 /dev/block/platform/155a0000.ufs/by-name/EFS /efs nosuid nodev noatime noauto_da_alloc,discard,journal_async_commit,errors=panic
-
-on property:ro.bootmode=charger
-    mkdir /efs/lpm 0775 system system
-    class_start sec-charger
-
-service lpm /system/bin/lpm
-    class sec-charger
+service charger /charger
+    class charger
     critical
+    seclabel u:r:charger:s0
+
+# LPM
+#on property:ro.bootmode=charger
+#    mount ext4 /dev/block/platform/155a0000.ufs/by-name/SYSTEM /system wait ro
+
+#on property:ro.bootmode=charger
+#    wait /dev/block/platform/155a0000.ufs/by-name/EFS
+#    mount ext4 /dev/block/platform/155a0000.ufs/by-name/EFS /efs nosuid nodev noatime noauto_da_alloc,discard,journal_async_commit,errors=panic
+
+#on property:ro.bootmode=charger
+#    mkdir /efs/lpm 0775 system system
+#    class_start sec-charger
+
+#service lpm /system/bin/lpm
+#    class sec-charger
+#    critical
 
 # sem_daemon permission
     chown system system /efs/sec_efs/ssp_data
@@ -1070,12 +1094,12 @@ on property:ro.securestorage.support=true
     start secure_storage
 
 # SSWAP
-service swapon /sbin/sswap -s -f 2048
-    class core
-    user root
-    group root
-    seclabel u:r:sswap:s0
-    oneshot
+#service swapon /sbin/sswap -s -f 2048
+#    class core
+#    user root
+#    group root
+#    seclabel u:r:sswap:s0
+#    oneshot
 
 # redsocks
 service redsocks /system/bin/redsocks -c /data/mptcp/redsocks.conf
@@ -1105,7 +1129,12 @@ service apexserver /system/bin/apexserver
 	disabled
 
 # irisd
-service irisd /system/bin/irisd
-    class late_start
-    user system
-    group system
+#service irisd /system/bin/irisd
+#    class late_start
+#    user system
+#    group system
+
+on shutdown
+    # Fix permissions then store the current batt_capacity_max value in the EFS partition
+    chmod 600 /sys/class/power_supply/battery/batt_capacity_max
+    copy /sys/class/power_supply/battery/batt_capacity_max /efs/Battery/prev_batt_capacity_max
