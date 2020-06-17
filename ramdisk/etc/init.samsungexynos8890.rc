@@ -924,6 +924,10 @@ on fs
     chown system system /sys/class/rtc/rtc0/device/adc_reg_7
     chown system system /sys/class/rtc/rtc0/device/adc_ctrl1
 
+# sem_daemon permission
+    chown system system /efs/sec_efs/ssp_data
+    chmod 0644 /efs/sec_efs/ssp_data
+
 # ARGOSD
 #service argos-daemon /vendor/bin/argosd
 #    class main
@@ -1022,10 +1026,6 @@ service charger /charger
 #service lpm /system/bin/lpm
 #    class sec-charger
 #    critical
-
-# sem_daemon permission
-    chown system system /efs/sec_efs/ssp_data
-    chmod 0644 /efs/sec_efs/ssp_data
 
 # sem_daemon
 service sem_daemon /system/bin/sem_daemon
