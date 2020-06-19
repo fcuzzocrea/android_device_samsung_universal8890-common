@@ -75,7 +75,6 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl.universal8890 \
-    init.bluetooth.rc \
     libbt-vendor
 
 # Camera
@@ -294,8 +293,7 @@ PRODUCT_PACKAGES += \
     modemloader \
     libsecril-client-sap \
     Stk \
-    init.baseband.rc \
-    init.baseband.sh
+    init.baseband.rc
 
 # Copy stock APN config as lineage one seams to be quite broken and outdated
 PRODUCT_COPY_FILES += \
