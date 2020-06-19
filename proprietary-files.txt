@@ -224,13 +224,13 @@ vendor/etc/init/vendor.samsung.hardware.radio.configsvc@1.0-service.rc
 vendor/lib/libreference-ril.so
 vendor/lib/libril.so
 vendor/lib/librilutils.so
-vendor/lib/libsec-ril-dsds.so
+vendor/lib/libsec-ril-dsds.so|2be1cd7e0edcc23c930bf24a1dcae0fbe56bac14
 vendor/lib/libsec-ril.so
 vendor/lib/libvndsecril-client.so
 vendor/lib64/libreference-ril.so
 vendor/lib64/libril.so
 vendor/lib64/librilutils.so
-vendor/lib64/libsec-ril-dsds.so
+vendor/lib64/libsec-ril-dsds.so|0a072a4eeb926d476c1d01c1dfd6ac993da93234
 vendor/lib64/libsec-ril.so
 vendor/lib64/libvndsecril-client.so
 
@@ -296,3 +296,5 @@ vendor/etc/wifi/bcmdhd_sta.bin_c0_plus_blob
 vendor/etc/wifi/indoorchannel.info
 vendor/etc/wifi/nvram.txt_c0_plus
 vendor/etc/wifi/nvram.txt_murata_c0_plus
+vendor/lib/libwifi-hal.so
+vendor/lib64/libwifi-hal.so

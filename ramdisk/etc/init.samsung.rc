@@ -231,6 +231,9 @@ on init
     # disable klogd to avoid interrupting 'cat /proc/kmsg' by reading /proc/kmsg simultaneously
     setprop logd.kernel false
 
+on fs
+    setprop ro.crypto.fde_algorithm AES-256-XTS-DISK
+    
 on post-fs
     start sec-sh
     
