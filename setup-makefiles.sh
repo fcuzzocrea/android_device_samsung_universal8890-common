@@ -45,7 +45,7 @@ write_makefiles "$MY_DIR"/proprietary-files.txt true
 printf '\n%s\n' 'ifeq ($(WITH_EXYNOS_BSP),)' >> "$PRODUCTMK"
 printf '\n%s\n' 'ifeq ($(WITH_EXYNOS_BSP),)' >> "$ANDROIDMK"
 
-write_makefiles "$MY_DIR"/proprietary-files-bsp.txt
+#write_makefiles "$MY_DIR"/proprietary-files-bsp.txt
 
 printf '%s\n' 'endif' >> "$PRODUCTMK"
 printf '%s\n' 'endif' >> "$ANDROIDMK"
