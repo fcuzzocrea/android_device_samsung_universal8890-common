@@ -126,9 +126,9 @@ PRODUCT_PACKAGES += \
     FlipFlap
 
 # Gatekeeper
-#PRODUCT_PACKAGES += \
-#    android.hardware.gatekeeper@1.0-service \
-#    android.hardware.gatekeeper@1.0-impl
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0-impl
 
 # GNNS
 PRODUCT_PACKAGES += \
@@ -324,9 +324,9 @@ PRODUCT_PACKAGES += \
     textclassifier.bundle1
 
 # Thermal
-#PRODUCT_PACKAGES += \
-#    android.hardware.thermal@1.0-impl \
-#    android.hardware.thermal@1.0-service
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+    android.hardware.thermal@1.0-service
 
 # Touch features
 PRODUCT_PACKAGES += \
