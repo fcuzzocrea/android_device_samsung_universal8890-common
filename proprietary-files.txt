@@ -1,4 +1,4 @@
-# Files are from N935KKKU4CTD2 unless pinned
+# Files are from N935FXXS7CTE1 unless pinned
 # Vendor security patch level 2020-05-01
 
 # AptX - from crosshatch - QP1A.190711.020
@@ -102,9 +102,8 @@ vendor/lib64/libsynaFpSensorTestNwd.so
 vendor/lib64/libgf_in_system_lib.so
 
 # Gatekeeper
-vendor/etc/init/android.hardware.gatekeeper@1.0-service.rc
-vendor/lib/hw/gatekeeper.exynos8890.so
-vendor/lib64/hw/gatekeeper.exynos8890.so
+vendor/lib/hw/gatekeeper.exynos8890.so:vendor/lib/hw/gatekeeper.universal8890.so
+vendor/lib64/hw/gatekeeper.exynos8890.so:vendor/lib64/hw/gatekeeper.universal8890.so
 
 # GNSS
 etc/floating_feature.xml
@@ -154,13 +153,6 @@ vendor/lib64/hw/keystore.mdfpp.so
 # Memtrack
 vendor/lib/hw/memtrack.universal8890.so
 vendor/lib64/hw/memtrack.universal8890.so
-
-# Mobicore
-vendor/bin/mcDriverDaemon
-vendor/lib/libMcClient.so
-vendor/lib/libMcRegistry.so
-vendor/lib64/libMcClient.so
-vendor/lib64/libMcRegistry.so
 
 # NFC
 lib64/android.hardware.nfc@1.0.so
@@ -224,15 +216,21 @@ vendor/etc/init/vendor.samsung.hardware.radio.configsvc@1.0-service.rc
 vendor/lib/libreference-ril.so
 vendor/lib/libril.so
 vendor/lib/librilutils.so
-vendor/lib/libsec-ril-dsds.so|2be1cd7e0edcc23c930bf24a1dcae0fbe56bac14
+vendor/lib/libsec-ril-dsds.so
 vendor/lib/libsec-ril.so
 vendor/lib/libvndsecril-client.so
 vendor/lib64/libreference-ril.so
 vendor/lib64/libril.so
 vendor/lib64/librilutils.so
-vendor/lib64/libsec-ril-dsds.so|0a072a4eeb926d476c1d01c1dfd6ac993da93234
+vendor/lib64/libsec-ril-dsds.so
 vendor/lib64/libsec-ril.so
 vendor/lib64/libvndsecril-client.so
+
+# RIL
+vendor/etc/plmn_delta.bin
+vendor/etc/plmn_delta_chn.bin
+vendor/etc/plmn_delta_hktw.bin
+vendor/etc/plmn_se13.bin
 
 # Sensors
 lib/libsensorlistener.so

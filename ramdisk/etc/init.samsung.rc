@@ -299,9 +299,30 @@ on post-fs-data
     restorecon /data/vendor/biometrics
 
     mkdir /data/misc/radio 0775 system radio
-    mkdir /data/misc/wifi_hostapd 0771 wifi system
-    mkdir /data/misc/wifi_share_profile 0771 wifi system
     mkdir /data/misc/mediacodec 0700 mediacodec mediacodec
+
+    # [ Wi-Fi init
+    # Create directory for hostapd
+    mkdir /data/hostapd 0770 system wifi
+
+    # give system access to wpa_supplicant.conf for backup and restore
+    mkdir /data/misc/wifi 0770 wifi system
+    mkdir /data/misc/wifi_share_profile 0771 wifi system
+    mkdir /data/misc/wifi_hostapd 0771 wifi system    
+
+    mkdir /data/log/wifi/ 0775 system root
+    mkdir /data/misc/dhcp 0775 dhcp dhcp
+    mkdir /data/misc/reboot 0700 system system
+    chown dhcp dhcp /data/misc/dhcp
+    chown system system /sys/kernel/ipv4/tcp_delack_seg
+
+    # Wi-Fi temporary log Directory for Android Global DE policy
+    mkdir /data/wifi/ 0770 system root
+
+    # for WIFI Antenna
+    write /data/misc/conn/.wificable.info E
+    chown system root /data/misc/conn/.wificable.info
+    chmod 0666 /data/misc/conn/.wificable.info
 
     #lpnetConfig AppSync
     mkdir /data/misc/lpnet 0700 system system

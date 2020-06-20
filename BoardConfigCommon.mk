@@ -233,8 +233,10 @@ TARGET_NO_SENSOR_PERMISSION_CHECK := true
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/lib64/libexynoscamera.so|/system/lib64/libexynoscamera_shim.so \
-    /system/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so
-
+    /system/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so \
+    /system/lib64/libstagefright.so|libstagefright_shim.so \
+    /system/lib/libstagefright.so|libstagefright_shim.so
+    
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 
