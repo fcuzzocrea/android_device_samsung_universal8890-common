@@ -44,9 +44,6 @@ USE_XML_AUDIO_POLICY_CONF := 1
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
 
-# Bionic
-MALLOC_SVELTE := true
-
 # Charger
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -201,6 +198,9 @@ endif
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
+
+# Renderscript
+OVERRIDE_RS_DRIVER := libRSDriverArm.so
 
 # RIL
 BOARD_MODEM_TYPE := ss333

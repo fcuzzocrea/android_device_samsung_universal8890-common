@@ -15,8 +15,11 @@
  * limitations under the License.
  */
 
+
 #ifndef SAMSUNG_POWER_H
 #define SAMSUNG_POWER_H
+
+#define ALLOW_NONINTERACTIVE_SCREENON 1
 
 /*
  * Board specific nodes
