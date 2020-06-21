@@ -323,10 +323,6 @@ on post-fs-data
     write /data/misc/conn/.wificable.info E
     chown system root /data/misc/conn/.wificable.info
     chmod 0666 /data/misc/conn/.wificable.info
-    
-    # Dirty fix
-    mkdir /system/vendor/vendor/etc/
-    symlink /system/vendor/etc/wifi/ /system/vendor/vendor/etc/wifi
 
     #lpnetConfig AppSync
     mkdir /data/misc/lpnet 0700 system system
