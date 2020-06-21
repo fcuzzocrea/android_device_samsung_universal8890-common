@@ -98,9 +98,9 @@ vendor/firmware/setfile_imx260_d.bin
 
 # DRM - Widevine - pinned to G970FXXU3BSKO
 bin/move_widevine_data.sh
-vendor/bin/hw/android.hardware.drm@1.2-service.widevine|f78c19e2680f6fb29e85c63f92f7ba51a25f8715
-vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|d269dc5ad904ce28bd43ace721a53183386c2c2f
-vendor/lib/libwvhidl.so|6e0eeaaa75e8d4a0c9368b189dace648a8f2cfe3
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
+vendor/lib/libwvhidl.so
 
 # Fingerprint
 vendor/lib/libbauthserver.so
