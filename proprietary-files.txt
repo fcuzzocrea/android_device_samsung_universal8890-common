@@ -99,7 +99,6 @@ vendor/firmware/setfile_imx260_d.bin
 # DRM - Widevine
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
-vendor/lib/liboemcrypto.so
 vendor/lib/libwvhidl.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
@@ -241,10 +240,6 @@ vendor/lib64/librilutils.so
 vendor/lib64/libsec-ril-dsds.so
 vendor/lib64/libsec-ril.so
 vendor/lib64/libvndsecril-client.so
-
-# Renderscript
-vendor/lib/libRSDriverArm.so|62c504d56c93000306cbdd14c6091bb0e3b14ee0
-vendor/lib64/libRSDriverArm.so|e74041f6c75d5c94db711d8ebdede38522299829
 
 # RIL
 vendor/etc/plmn_delta.bin

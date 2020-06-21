@@ -118,13 +118,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # WiFi Display
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
-    ro.vendor.wfdsupport=1
-    
- 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.adb.secure=0 \
-    ro.debuggable=1 \
-    persist.service.adb.enable=1 \
-    persist.sys.usb.config=mtp,adb \
-    persist.sys.root_access=2
-    
+    ro.vendor.wfdsupport=1    

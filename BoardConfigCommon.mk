@@ -202,11 +202,6 @@ endif
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)/releasetools
 
-# Renderscript
-BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a53
-BOARD_OVERRIDE_RS_CPU_VARIANT_64 := exynos-m1
-OVERRIDE_RS_DRIVER := libRSDriverArm.so
-
 # RIL
 BOARD_MODEM_TYPE := ss333
 BOARD_PROVIDES_LIBRIL := true
@@ -234,9 +229,7 @@ TARGET_NO_SENSOR_PERMISSION_CHECK := true
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/lib64/libexynoscamera.so|/system/lib64/libexynoscamera_shim.so \
-    /system/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so \
-    /system/lib64/libstagefright.so|libstagefright_shim.so \
-    /system/lib/libstagefright.so|libstagefright_shim.so
+    /system/lib/libexynoscamera.so|/system/lib/libexynoscamera_shim.so
     
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
