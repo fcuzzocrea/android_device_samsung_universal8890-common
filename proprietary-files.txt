@@ -96,7 +96,7 @@ vendor/firmware/setfile_4e6_d.bin
 vendor/firmware/setfile_imx260.bin
 vendor/firmware/setfile_imx260_d.bin
 
-# DRM - Widevine - pinned to G970FXXU3BSKO
+# DRM - Widevine
 bin/move_widevine_data.sh
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
