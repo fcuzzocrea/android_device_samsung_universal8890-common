@@ -39,7 +39,6 @@
         <item>mobile_fota,10,0,2,60000,true</item>
         <item>mobile_ims,11,0,1,-1,true</item>
         <item>mobile_cbs,12,0,2,60000,true</item>
-        <item>wifi_p2p,13,1,0,-1,true</item>
         <item>mobile_ia,14,0,2,-1,true</item>
         <item>mobile_emergency,15,0,2,-1,true</item>
         <item>mobile_bip,23,0,2,60000,true</item>
@@ -235,19 +234,7 @@
          * The remote submix module "audio.r_submix.default" must be installed on the device.
          * The device must be provisioned with HDCP keys (for protected content).
     -->
-    <bool name="config_enableWifiDisplay">true</bool>
-
-    <!-- Set to true if the wifi display supports compositing content stored
-         in gralloc protected buffers.  For this to be true, there must exist
-         a protected hardware path for surface flinger to composite and send
-         protected buffers to the wifi display video encoder.
-         If this flag is false, we advise applications not to use protected
-         buffers (if possible) when presenting content to a wifi display because
-         the content may be blanked.
-         This flag controls whether the {@link Display#FLAG_SUPPORTS_PROTECTED_BUFFERS}
-         flag is set for wifi displays.
-    -->
-    <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
+    <bool name="config_enableWifiDisplay">false</bool>
 
     <!-- Control the behavior when the user long presses the home button.
             0 - Nothing

@@ -112,10 +112,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.slsi_platform=1
 
 # WiFi
-PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.direct.interface=p2p-dev-wlan0
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    wifi.direct.interface=p2p-dev-wlan0
 	
 # WiFi Display
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.debug.wfd.enable=1 \
-    ro.vendor.wfdsupport=1    
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.debug.wfd.enable=1 \
+#    ro.vendor.wfdsupport=1    
