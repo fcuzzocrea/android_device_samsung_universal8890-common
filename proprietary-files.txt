@@ -254,6 +254,7 @@ vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_se13.bin
 
 # Sensors
+lib/libhr.so
 lib/libsensorlistener.so
 lib64/libhr.so
 lib64/libsensorlistener.so
