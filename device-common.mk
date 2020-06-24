@@ -58,8 +58,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.audio.effect@2.0-service \
-    android.hardware.soundtrigger@2.1-impl \
-    android.hardware.soundtrigger@2.1-service \
     libtinycompress
 
 PRODUCT_COPY_FILES += \
@@ -148,7 +146,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
-    android.hardware.graphics.mapper@2.0-impl
+    android.hardware.graphics.mapper@2.0-impl-2.1
 
 # Health
 PRODUCT_PACKAGES += \
@@ -293,11 +291,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.3-radio-service.samsung \
     libxml2 \
-    libprotobuf-cpp-full \
-    libsecril-client \
-    modemloader \
-    libsecril-client-sap \
-    Stk \
     init.baseband.rc \
     init.baseband.sh
 
