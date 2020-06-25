@@ -73,7 +73,6 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl.universal8890 \
-    init.bluetooth.rc \
     libbt-vendor
 
 # Camera
@@ -291,8 +290,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.3-radio-service.samsung \
     libxml2 \
-    init.baseband.rc \
-    init.baseband.sh
+    init.baseband.rc
 
 # Copy stock APN config as lineage one seams to be quite broken and outdated
 PRODUCT_COPY_FILES += \
