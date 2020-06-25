@@ -41,7 +41,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwc.otf=1 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.disable_backpressure=1 \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    ro.zygote.disable_gl_preload=true
 
 # Keystore
 PRODUCT_PROPERTY_OVERRIDES += \
