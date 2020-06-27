@@ -42,6 +42,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=1 \
     debug.sf.disable_backpressure=1 \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    ro.surface_flinger.protected_contents=true \
     ro.zygote.disable_gl_preload=true
 
 # Keystore
@@ -111,4 +112,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # WiFi Display
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.direct.interface=p2p-dev-wlan0 \
-    ro.vendor.wfdsupport=1    
+    ro.vendor.wfdsupport=1
+    
+# Zygote preforking
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.runtime_native.usap_pool_enabled=true
