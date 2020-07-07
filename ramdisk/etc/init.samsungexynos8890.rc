@@ -378,6 +378,13 @@ on boot
     chown radio system /sys/devices/14ac0000.mali/dvfs_max_lock
     chmod 0664 /sys/devices/14ac0000.mali/dvfs_max_lock
 
+    chown radio system /sys/kernel/gpu/gpu_governor
+    chmod 0664 /sys/kernel/gpu/gpu_governor
+    chown radio system /sys/kernel/gpu/gpu_min_clock
+    chmod 0664 /sys/kernel/gpu/gpu_min_clock    
+    chown radio system /sys/kernel/gpu/gpu_max_clock
+    chmod 0664 /sys/kernel/gpu/gpu_max_clock
+
     chown radio system /sys/devices/system/sec_os_ctrl/migrate_os
     chmod 664 /sys/devices/system/sec_os_ctrl/migrate_os
 

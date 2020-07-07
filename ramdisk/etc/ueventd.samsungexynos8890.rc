@@ -143,6 +143,10 @@
 /dev/umts_csd             0660   system     loop_radio
 /dev/smd4                 0660   system     radio
 
+# CPUFreq
+/sys/devices/system/cpu/cpu*   cpufreq/scaling_max_freq   0664  system system
+/sys/devices/system/cpu/cpu*   cpufreq/scaling_min_freq   0664  system systemcpufreq
+
 # interactive governor parameters
 /sys/devices/system/cpu/cpu*	cpufreq/interactive/timer_rate			0660	system	system
 /sys/devices/system/cpu/cpu*	cpufreq/interactive/timer_slack			0660	system	system
@@ -209,6 +213,9 @@
 
 # USB
 /dev/ttyGS*               0660   system     system
+
+# DMA Latency
+/dev/cpu_dma_latency      0664   system     system
 
 # Google FRP solution
 /dev/block/platform/155a0000.ufs/by-name/PERSISTENT    0660    system    system
