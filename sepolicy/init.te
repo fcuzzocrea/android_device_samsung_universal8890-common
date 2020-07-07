@@ -131,6 +131,7 @@ allow init sysfs_scsi_host:file { relabelfrom setattr };
 allow init sysfs_sec_sddata:file setattr;
 allow init sysfs_vmscan:file setattr;
 allow init sysfs_pcie:file setattr;
+allow init sysfs_gpu:file setattr;
 
 # Proc files
 allow init proc_reset_reason:file { rw_file_perms setattr };

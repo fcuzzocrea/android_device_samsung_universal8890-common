@@ -378,6 +378,14 @@ on boot
     chown radio system /sys/devices/14ac0000.mali/dvfs_max_lock
     chmod 0664 /sys/devices/14ac0000.mali/dvfs_max_lock
 
+    # GPU Sysfs
+    chown radio system /sys/kernel/gpu/gpu_governor
+    chmod 0664 /sys/kernel/gpu/gpu_governor
+    chown radio system /sys/kernel/gpu/gpu_min_clock
+    chmod 0664 /sys/kernel/gpu/gpu_min_clock    
+    chown radio system /sys/kernel/gpu/gpu_max_clock
+    chmod 0664 /sys/kernel/gpu/gpu_max_clock
+
     chown radio system /sys/devices/system/sec_os_ctrl/migrate_os
     chmod 664 /sys/devices/system/sec_os_ctrl/migrate_os
 
@@ -415,7 +423,7 @@ on boot
 
     # Assume HMP uses shared cpufreq policy for all LITTLE CPUs
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
-    chmod 0660 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
 
     chown system system sys/devices/system/cpu/cpufreq/mp-cpufreq/cluster0_max_freq
     chmod 0660 sys/devices/system/cpu/cpufreq/mp-cpufreq/cluster0_max_freq
@@ -692,6 +700,7 @@ on fs
     chown system system /sys/class/lcd/panel/dpui_dbg
     chown system system /sys/class/lcd/panel/smart_on
     chown system system /sys/android_touch/doubletap2wake
+    chmod 0664 /sys/android_touch/doubletap2wake
 
     # Permissions for MDNIE
     chown system system /sys/class/mdnie/mdnie/mode

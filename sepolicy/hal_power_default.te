@@ -31,3 +31,13 @@ allow hal_power_default sysfs:dir open;
 
 allow hal_power_default sysfs_input:lnk_file read;
 
+allow hal_power_default cpu_dma_device:file rw_file_perms;
+
+allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+
+allow hal_power_default cpu_dma_device:chr_file { open write };
+
+allow hal_power_default sysfs_sec_tsp:lnk_file read;
+
+allow hal_power_default sysfs_gpu:file { open write };
+allow hal_power_default sysfs_gpu:dir search;

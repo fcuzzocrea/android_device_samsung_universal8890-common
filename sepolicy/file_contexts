@@ -77,6 +77,9 @@
 
 /dev/stune(/.*)?             u:object_r:cgroup:s0
 
+# cpu
+/dev/cpu_dma_latency         u:object_r:cpu_dma_device:s0
+
 ####################################
 # Efs Files
 
@@ -200,6 +203,7 @@
 
 # GPU
 /sys/devices/14ac0000.mali(/.*)?                    u:object_r:sysfs_mali:s0
+/sys/kernel/gpu(/.*)?                               u:object_r:sysfs_gpu:s0
 
 # HMT relay mode node
 /sys/devices/virtual/relay_on                       u:object_r:sysfs_hmt:s0
@@ -293,7 +297,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.2-service\.clearkey                       u:object_r:hal_drm_clearkey_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service\.widevine                       u:object_r:hal_drm_widevine_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.samsung                      u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.0-service\.exynos                       u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.3-service\.samsung-libperfmgr           u:object_r:hal_power_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.radio@1\.3-radio-service\.samsung                u:object_r:hal_radio_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator@1\.3-service\.samsung                   u:object_r:hal_vibrator_default_exec:s0
 /(vendor|system/vendor)/bin/hw/sec\.android\.hardware\.nfc@1\.1-service                            u:object_r:hal_nfc_default_exec:s0
