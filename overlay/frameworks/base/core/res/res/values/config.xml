@@ -1045,7 +1045,7 @@
     <bool name="config_enableAutoPowerModes">true</bool>
 
     <!-- True if the device supports Sustained Performance Mode-->
-    <bool name="config_sustainedPerformanceModeSupported">false</bool>
+    <bool name="config_sustainedPerformanceModeSupported">true</bool>
 
     <!-- Indicate whether the SD card is accessible without removing the battery. -->
     <bool name="config_batterySdCardAccessibility">true</bool>
