@@ -44,3 +44,6 @@ allow hal_power_default sysfs_gpu:dir search;
 
 allow hal_power_default sysfs_sec_touchkey:dir search;
 allow hal_power_default sysfs_sec_touchkey:lnk_file read;
+
+# /dev/cluster[0-9]_freq_(max|min)
+allow hal_power_default pm_qos_device:chr_file rw_file_perms;

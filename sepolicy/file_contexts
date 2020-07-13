@@ -82,6 +82,16 @@
 # cpu
 /dev/cpu_dma_latency         u:object_r:cpu_dma_device:s0
 
+### qos
+/dev/bus_throughput                          u:object_r:pm_qos_device:s0
+/dev/bus_throughput_max                      u:object_r:pm_qos_device:s0
+/dev/cluster0_freq_max                       u:object_r:pm_qos_device:s0
+/dev/cluster0_freq_min                       u:object_r:pm_qos_device:s0
+/dev/cluster1_freq_max                       u:object_r:pm_qos_device:s0
+/dev/cluster1_freq_min                       u:object_r:pm_qos_device:s0
+/dev/cpu_online_max                          u:object_r:pm_qos_device:s0
+/dev/cpu_online_min                          u:object_r:pm_qos_device:s0
+
 ####################################
 # Efs Files
 
