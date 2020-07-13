@@ -31,6 +31,19 @@ on init
 
     write /proc/sys/vm/page-cluster 0
 
+    # Power-libperfmgr interfaces
+    chown system system /dev/cluster0_freq_max
+    chown system system /dev/cluster0_freq_min
+    chown system system /dev/cluster1_freq_max
+    chown system system /dev/cluster1_freq_min
+    chown system system /dev/bus_throughput
+
+    chmod 0664 /dev/cluster0_freq_max
+    chmod 0664 /dev/cluster0_freq_min
+    chmod 0664 /dev/cluster1_freq_max
+    chmod 0664 /dev/cluster1_freq_min
+    chmod 0664 /dev/bus_throughput
+
     # Accelerometer_sensor
     chown system radio /sys/class/sensors/accelerometer_sensor/raw_data
     chown system radio /sys/class/sensors/accelerometer_sensor/calibration
