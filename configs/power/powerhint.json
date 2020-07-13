@@ -91,6 +91,15 @@
             "ResetOnInit": true
         },
         {
+            "Name": "TouchkeyEnable",
+            "Path": "/sys/class/sec/sec_touchkey/input/enabled",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "ResetOnInit": true
+        },
+        {
             "Name": "LCDEnable",
             "Path": "/sys/class/power_supply/battery/lcd",
             "Values": [
@@ -341,6 +350,12 @@
         {
             "PowerHint": "NOT_INTERACTIVE",
             "Node": "TouchscreenEnable",
+            "Duration": 0,
+            "Value": "0"
+        },
+        {
+            "PowerHint": "NOT_INTERACTIVE",
+            "Node": "TouchkeyEnable",
             "Duration": 0,
             "Value": "0"
         },

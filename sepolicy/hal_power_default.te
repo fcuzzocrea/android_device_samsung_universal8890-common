@@ -41,3 +41,6 @@ allow hal_power_default sysfs_sec_tsp:lnk_file read;
 
 allow hal_power_default sysfs_gpu:file { open write };
 allow hal_power_default sysfs_gpu:dir search;
+
+allow hal_power_default sysfs_sec_touchkey:dir search;
+allow hal_power_default sysfs_sec_touchkey:lnk_file read;
