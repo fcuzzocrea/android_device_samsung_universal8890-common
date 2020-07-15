@@ -55,9 +55,8 @@
             "Path": "/sys/kernel/gpu/gpu_max_clock",
             "Values": [
                 "650",
-                "546",
-                "419",
-                "338"
+                "600",
+                "546"
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
@@ -66,8 +65,9 @@
             "Name": "GPUMinFreq",
             "Path": "/sys/kernel/gpu/gpu_min_clock",
             "Values": [
+                "650",
                 "546",
-                "338",
+                "419",
                 "260"
             ],
             "ResetOnInit": true
@@ -181,10 +181,16 @@
         },
         {
             "PowerHint": "LAUNCH",
+            "Node": "GPUMinFreq",
+            "Duration": 5000,
+            "Value": "650"
+        },
+        {
+            "PowerHint": "LAUNCH",
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 5000,
             "Value": "0x0000002c"
-        },
+        },  
         {
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "CPUBigClusterMaxFreq",
@@ -208,6 +214,12 @@
             "Node": "CPULittleClusterMinFreq",
             "Duration": 1000,
             "Value": "1586000"
+        },
+        {
+            "PowerHint": "CAMERA_LAUNCH",
+            "Node": "GPUMinFreq",
+            "Duration": 1000,
+            "Value": "650"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
@@ -297,7 +309,7 @@
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "GPUMaxFreq",
             "Duration": 0,
-            "Value": "419"
+            "Value": "600"
         },
         {
             "PowerHint": "VR_MODE",
@@ -327,7 +339,7 @@
             "PowerHint": "INTERACTION",
             "Node": "GPUMinFreq",
             "Duration": 0,
-            "Value": "338"
+            "Value": "546"
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
@@ -339,13 +351,13 @@
             "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "GPUMinFreq",
             "Duration": 0,
-            "Value": "338"
+            "Value": "419"
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
             "Node": "GPUMaxFreq",
             "Duration": 0,
-            "Value": "546"
+            "Value": "600"
         },
         {
             "PowerHint": "NOT_INTERACTIVE",
