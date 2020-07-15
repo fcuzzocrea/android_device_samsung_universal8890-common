@@ -250,10 +250,6 @@ lib/libGrallocWrapper.so|7d0d9ef3edba98a98ba19b8dc127cf8c26a08073
 lib64/libGrallocWrapper.so|ec43e9861a0a3ca45ed37c84a94b1905f0607dec
 lib64/hw/gralloc.exynos5.so|ec43e9861a0a3ca45ed37c84a94b1905f0607dec
 
-# Thermal
-vendor/lib/hw/thermal.universal8890.so
-vendor/lib64/hw/thermal.universal8890.so
-
 # Wifi
 vendor/bin/hw/macloader
 vendor/bin/hw/mfgloader
