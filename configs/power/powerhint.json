@@ -42,6 +42,7 @@
             "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq",
             "Values": [
                 "2600000",
+                "2288000",
                 "1768000",
                 "1560000",
                 "1352000",
@@ -162,6 +163,24 @@
     ],
     "Actions": [
         {
+            "PowerHint": "INTERACTION",
+            "Node": "CPUBigClusterMinFreq",
+            "Duration": 0,
+            "Value": "1560000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "CPULittleClusterMinFreq",
+            "Duration": 0,
+            "Value": "1066000"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "GPUMinFreq",
+            "Duration": 0,
+            "Value": "546"
+        },
+        {
             "PowerHint": "LAUNCH",
             "Node": "CPUBigClusterMaxFreq",
             "Duration": 5000,
@@ -171,7 +190,7 @@
             "PowerHint": "LAUNCH",
             "Node": "CPUBigClusterMinFreq",
             "Duration": 5000,
-            "Value": "2600000"
+            "Value": "2288000"
         },
         {
             "PowerHint": "LAUNCH",
@@ -190,7 +209,7 @@
             "Node": "PMQoSCpuDmaLatency",
             "Duration": 5000,
             "Value": "0x0000002c"
-        },  
+        },
         {
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "CPUBigClusterMaxFreq",
@@ -201,14 +220,14 @@
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "CPUBigClusterMinFreq",
             "Duration": 1000,
-            "Value": "2600000"
-        },        
+            "Value": "2288000"
+        },
         {
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "CPULittleClusterMaxFreq",
             "Duration": 1000,
             "Value": "1586000"
-        },      
+        },
         {
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "CPULittleClusterMinFreq",
@@ -249,8 +268,8 @@
             "PowerHint": "CAMERA_SHOT",
             "Node": "CPUBigClusterMinFreq",
             "Duration": 1000,
-            "Value": "2600000"
-        },        
+            "Value": "2288000"
+        },
         {
             "PowerHint": "CAMERA_SHOT",
             "Node": "CPULittleClusterMaxFreq",
@@ -322,24 +341,6 @@
             "Node": "PowerHALMainState",
             "Duration": 0,
             "Value": "VR_SUSTAINED_PERFORMANCE"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "CPUBigClusterMinFreq",
-            "Duration": 0,
-            "Value": "1352000"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "CPULittleClusterMinFreq",
-            "Duration": 0,
-            "Value": "1066000"
-        },
-        {
-            "PowerHint": "INTERACTION",
-            "Node": "GPUMinFreq",
-            "Duration": 0,
-            "Value": "546"
         },
         {
             "PowerHint": "EXPENSIVE_RENDERING",
