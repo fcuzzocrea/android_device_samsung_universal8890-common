@@ -50,6 +50,36 @@
                 "0"
             ],
             "ResetOnInit": true
+        },        
+        {
+            "Name": "CPULittleClusterBoost",
+            "Path": "/sys/devices/system/cpu/cpu0/cpufreq/interactive/boost",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },
+        {
+            "Name": "CPULittleClusterBoostPulse",
+            "Path": "/sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },        
+        {
+            "Name": "CPUBigClusterBoost",
+            "Path": "/sys/devices/system/cpu/cpu4/cpufreq/interactive/boost",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
         },
         {
             "Name": "GPUMaxFreq",
@@ -197,6 +227,24 @@
             "Node": "CPULittleClusterMinFreq",
             "Duration": 5000,
             "Value": "1586000"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "CPUBigClusterBoost",
+            "Duration": 5000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "CPULittleClusterBoost",
+            "Duration": 5000,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "CPULittleClusterBoostPulse",
+            "Duration": 5000,
+            "Value": "1"
         },
         {
             "PowerHint": "LAUNCH",
