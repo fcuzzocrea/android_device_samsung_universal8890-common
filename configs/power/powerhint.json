@@ -455,6 +455,30 @@
             "Node": "PowerHALPerfProfileState",
             "Duration": 0,
             "Value": "HIGH_PERFORMANCE"
+        },
+        {
+            "PowerHint": "PROFILE_HIGH_PERFORMANCE",
+            "Node": "CPULittleClusterMaxFreq",
+            "Duration": 0,
+            "Value": "0x183350"
+        },
+        {
+            "PowerHint": "PROFILE_HIGH_PERFORMANCE",
+            "Node": "CPULittleClusterMinFreq",
+            "Duration": 0,
+            "Value": "0x183350"
+        },
+        {
+            "PowerHint": "PROFILE_HIGH_PERFORMANCE",
+            "Node": "CPUBigClusterMaxFreq",
+            "Duration": 0,
+            "Value": "0x27AC40"
+        },
+        {
+            "PowerHint": "PROFILE_HIGH_PERFORMANCE",
+            "Node": "CPUBigClusterMinFreq",
+            "Duration": 0,
+            "Value": "0x27AC40"
         }
     ]
 }

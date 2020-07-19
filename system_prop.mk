@@ -70,6 +70,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.nfc.fw_dl_on_boot=false \
     ro.nfc.port="I2C"
 
+# Power HAL
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.powerhal.perf_profiles=4
+
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hdcp2.rx=tz \
