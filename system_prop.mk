@@ -63,7 +63,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.stagefright.ccodec=0
+    debug.stagefright.ccodec=0 \
+    ro.vendor.cscsupported=1
     
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
