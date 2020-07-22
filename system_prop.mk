@@ -41,7 +41,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.latch_unsignaled=1 \
     debug.sf.disable_backpressure=1 \
     ro.surface_flinger.protected_contents=true \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.zygote.disable_gl_preload=true
 
 # Keystore
