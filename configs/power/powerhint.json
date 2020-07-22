@@ -70,7 +70,17 @@
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
-        },        
+        },
+        {
+            "Name": "CPUBigClusterBoostPulse",
+            "Path": "/sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse",
+            "Values": [
+                "0",
+                "1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },                
         {
             "Name": "CPUBigClusterBoost",
             "Path": "/sys/devices/system/cpu/cpu4/cpufreq/interactive/boost",
@@ -103,6 +113,17 @@
             ],
             "ResetOnInit": true
         },
+        {
+            "Name": "GPUGovernor",
+            "Path": "/sys/kernel/gpu/gpu_governor",
+            "Values": [
+                "Interactive",
+                "Booster",
+                "Static"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": true
+        },        
         {
             "Name": "PMQoSCpuDmaLatency",
             "Path": "/dev/cpu_dma_latency",
@@ -206,9 +227,9 @@
         },
         {
             "PowerHint": "INTERACTION",
-            "Node": "GPUMinFreq",
+            "Node": "GPUGovernor",
             "Duration": 0,
-            "Value": "546"
+            "Value": "Booster"
         },
         {
             "PowerHint": "LAUNCH",
@@ -230,6 +251,12 @@
         },
         {
             "PowerHint": "LAUNCH",
+            "Node": "CPULittleClusterMaxFreq",
+            "Duration": 5000,
+            "Value": "0x183350"
+        },        
+        {
+            "PowerHint": "LAUNCH",
             "Node": "CPUBigClusterBoost",
             "Duration": 5000,
             "Value": "1"
@@ -248,10 +275,16 @@
         },
         {
             "PowerHint": "LAUNCH",
-            "Node": "GPUMinFreq",
+            "Node": "CPUBigClusterBoostPulse",
             "Duration": 5000,
-            "Value": "650"
-        },
+            "Value": "1"
+        },        
+        {
+            "PowerHint": "LAUNCH",
+            "Node": "GPUGovernor",
+            "Duration": 5000,
+            "Value": "Booster"
+        },        
         {
             "PowerHint": "LAUNCH",
             "Node": "PMQoSCpuDmaLatency",
@@ -284,10 +317,10 @@
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "GPUMinFreq",
+            "Node": "GPUGovernor",
             "Duration": 1000,
-            "Value": "650"
-        },
+            "Value": "Booster"
+        },        
         {
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "PMQoSCpuDmaLatency",
