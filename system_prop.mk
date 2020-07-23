@@ -35,6 +35,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
+    ro.hardware.egl=mali \
+    ro.hardware.vulkan=mali \
     debug.hwc.winupdate=1 \
     debug.hwc.otf=1 \
     debug.hwui.use_buffer_age=false \
