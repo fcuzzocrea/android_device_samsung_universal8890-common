@@ -93,6 +93,21 @@
             "Monitor": true
         },        
         {
+            "Name":"max77854-fuelgauge",
+            "Type":"UNKNOWN",
+            "HotThreshold":[
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN",
+                "NAN"
+            ],
+            "VrThreshold":"NAN",
+            "Multiplier":0.001
+        },
+        {
             "Name":"battery",
             "Type":"BATTERY",
             "HotThreshold":[
