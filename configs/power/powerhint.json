@@ -31,7 +31,8 @@
             "Values": [
                 "0x27AC40",
                 "0x215340",
-                "0x1AFA40",
+                "0x1C9080",
+                "0x130B00",
                 "0x1174C0"
             ],
             "DefaultIndex": 0,
@@ -43,7 +44,6 @@
             "Values": [
                 "0x27AC40",
                 "0x22E980",
-                "0x1AFA40",
                 "0x17CDC0",
                 "0x14A140",
                 "0xCB200",
@@ -97,7 +97,8 @@
             "Values": [
                 "650",
                 "600",
-                "546"
+                "546",
+                "419"
             ],
             "DefaultIndex": 0,
             "ResetOnInit": true
@@ -226,36 +227,6 @@
             "Value": "0x104410"
         },
         {
-            "PowerHint": "INTERACTION",
-            "Node": "GPUGovernor",
-            "Duration": 0,
-            "Value": "Booster"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "CPUBigClusterMaxFreq",
-            "Duration": 5000,
-            "Value": "0x27AC40"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "CPUBigClusterMinFreq",
-            "Duration": 5000,
-            "Value": "0x27AC40"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "CPULittleClusterMinFreq",
-            "Duration": 5000,
-            "Value": "0x183350"
-        },
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "CPULittleClusterMaxFreq",
-            "Duration": 5000,
-            "Value": "0x183350"
-        },        
-        {
             "PowerHint": "LAUNCH",
             "Node": "CPUBigClusterBoost",
             "Duration": 5000,
@@ -278,13 +249,7 @@
             "Node": "CPUBigClusterBoostPulse",
             "Duration": 5000,
             "Value": "1"
-        },        
-        {
-            "PowerHint": "LAUNCH",
-            "Node": "GPUGovernor",
-            "Duration": 5000,
-            "Value": "Booster"
-        },        
+        },
         {
             "PowerHint": "LAUNCH",
             "Node": "PMQoSCpuDmaLatency",
@@ -293,34 +258,28 @@
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPUBigClusterMaxFreq",
+            "Node": "CPUBigClusterBoost",
             "Duration": 1000,
-            "Value": "0x27AC40"
+            "Value": "1"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPUBigClusterMinFreq",
+            "Node": "CPULittleClusterBoost",
             "Duration": 1000,
-            "Value": "0x27AC40"
+            "Value": "1"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPULittleClusterMaxFreq",
+            "Node": "CPULittleClusterBoostPulse",
             "Duration": 1000,
-            "Value": "0x183350"
+            "Value": "1"
         },
         {
             "PowerHint": "CAMERA_LAUNCH",
-            "Node": "CPULittleClusterMinFreq",
+            "Node": "CPUBigClusterBoostPulse",
             "Duration": 1000,
-            "Value": "0x183350"
+            "Value": "1"
         },
-        {
-            "PowerHint": "CAMERA_LAUNCH",
-            "Node": "GPUGovernor",
-            "Duration": 1000,
-            "Value": "Booster"
-        },        
         {
             "PowerHint": "CAMERA_LAUNCH",
             "Node": "PMQoSCpuDmaLatency",
@@ -332,36 +291,6 @@
             "Node": "PowerHALMainState",
             "Duration": 0,
             "Value": "CAMERA_STREAMING"
-        },
-        {
-            "PowerHint": "CAMERA_STREAMING",
-            "Node": "CPUBigClusterMaxFreq",
-            "Duration": 0,
-            "Value": "0x1AFA40"
-        },
-        {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "CPUBigClusterMaxFreq",
-            "Duration": 1000,
-            "Value": "0x27AC40"
-        },
-        {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "CPUBigClusterMinFreq",
-            "Duration": 1000,
-            "Value": "0x22E980"
-        },
-        {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "CPULittleClusterMaxFreq",
-            "Duration": 1000,
-            "Value": "0x183350"
-        },
-        {
-            "PowerHint": "CAMERA_SHOT",
-            "Node": "CPULittleClusterMinFreq",
-            "Duration": 1000,
-            "Value": "0x183350"
         },
         {
             "PowerHint": "CAMERA_SHOT",
@@ -397,7 +326,7 @@
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "CPUBigClusterMaxFreq",
             "Duration": 0,
-            "Value": "0x1AFA40"
+            "Value": "0x130B00"
         },
         {
             "PowerHint": "SUSTAINED_PERFORMANCE",
@@ -409,7 +338,7 @@
             "PowerHint": "SUSTAINED_PERFORMANCE",
             "Node": "GPUMaxFreq",
             "Duration": 0,
-            "Value": "600"
+            "Value": "419"
         },
         {
             "PowerHint": "VR_MODE",
@@ -428,18 +357,6 @@
             "Node": "PowerHALRenderingState",
             "Duration": 0,
             "Value": "EXPENSIVE_RENDERING"
-        },
-        {
-            "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "GPUMinFreq",
-            "Duration": 0,
-            "Value": "419"
-        },
-        {
-            "PowerHint": "EXPENSIVE_RENDERING",
-            "Node": "GPUMaxFreq",
-            "Duration": 0,
-            "Value": "600"
         },
         {
             "PowerHint": "NOT_INTERACTIVE",

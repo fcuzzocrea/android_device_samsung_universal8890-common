@@ -982,3 +982,24 @@ on property:ro.debuggable=1
     
 on property:sys.boot_completed=1
     setprop sys.io.scheduler bfq
+
+    # Configure the CPU governor
+    write /sys/devices/system/cpu0/cpufreq/interactive/above_hispeed_delay "19000 962000:39000"
+    write /sys/devices/system/cpu0/cpufreq/interactive/go_hispeed_load 85
+    write /sys/devices/system/cpu0/cpufreq/interactive/hispeed_freq 858000
+    write /sys/devices/system/cpu0/cpufreq/interactive/io_is_busy 1
+    write /sys/devices/system/cpu0/cpufreq/interactive/target_loads "75 754000:85 1170000:95"
+    write /sys/devices/system/cpu0/cpufreq/interactive/min_sample_time 40000
+    write /sys/devices/system/cpu0/cpufreq/interactive/timer_rate 20000
+    write /sys/devices/system/cpu0/cpufreq/interactive/timer_slack 20000
+    write /sys/devices/system/cpu0/cpufreq/interactive/boostpulse_duration 40000
+
+    write /sys/devices/system/cpu4/cpufreq/interactive/above_hispeed_delay "59000 1248000:119000 1664000:19000"
+    write /sys/devices/system/cpu4/cpufreq/interactive/go_hispeed_load 89
+    write /sys/devices/system/cpu4/cpufreq/interactive/hispeed_freq 1040000
+    write /sys/devices/system/cpu4/cpufreq/interactive/io_is_busy 1
+    write /sys/devices/system/cpu4/cpufreq/interactive/target_loads "80 1040000:81 1352000:87 1664000:90"
+    write /sys/devices/system/cpu4/cpufreq/interactive/min_sample_time 40000
+    write /sys/devices/system/cpu4/cpufreq/interactive/timer_rate 20000
+    write /sys/devices/system/cpu0/cpufreq/interactive/timer_slack 20000
+    write /sys/devices/system/cpu0/cpufreq/interactive/boostpulse_duration 40000
