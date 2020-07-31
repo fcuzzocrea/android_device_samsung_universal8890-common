@@ -19,7 +19,7 @@
 
 #include <cutils/log.h>
 
-int _ZN7android17ExynosCameraFenceD1Ev()
+int _ZN7android17FoooooCameraFenceD1Ev()
 {
     ALOGW("SHIM: hijacking %s!", __func__);
 
@@ -31,7 +31,7 @@ int _ZN7android17ExynosCameraFenceD1Ev()
     return 0;
 }
 
-int _ZN7android17ExynosCameraFenceD2Ev()
+int _ZN7android17FoooooCameraFenceD2Ev()
 {
     ALOGW("SHIM: hijacking %s!", __func__);
 
