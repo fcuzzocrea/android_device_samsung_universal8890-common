@@ -28,6 +28,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
+    debug.hwc.otf=1 \
     debug.hwc.winupdate=1 \
     debug.sf.disable_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
