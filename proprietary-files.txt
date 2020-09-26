@@ -280,34 +280,6 @@ vendor/lib/libLifevibes_lvvetx.so
 vendor/lib/soundfx/libLifevibes_lvverx.so
 vendor/lib/soundfx/libLifevibes_lvvetx.so
 
-# OMX - from G930KKKU3ETG2
-lib/libExynosOMX_Core.so|aeddeb6126ab94001dc320e2f6efb1ea0135e48a
-lib/libExynosOMX_Resourcemanager.so|2afe11085a9c50c9509a97706c3750a13897fded
-lib/omx/libOMX.Exynos.AVC.Decoder.so|1b684b7fa5e4e4001fc4297e2afb826a3e794de2
-lib/omx/libOMX.Exynos.AVC.Encoder.so|9020d055f90cd3bff2ccf5f4f1af48e497cdc738
-lib/omx/libOMX.Exynos.HEVC.Decoder.so|9c29a9dcd4778790685ecc9c5ab27604a2deb3f5
-lib/omx/libOMX.Exynos.HEVC.Encoder.so|a406ece8d1f71caade488a9f90f5cef37b6cefbe
-lib/omx/libOMX.Exynos.MPEG4.Decoder.so|481b3c91a23dc4aae7987a10674a98b5bcae421c
-lib/omx/libOMX.Exynos.MPEG4.Encoder.so|c978bb296173e4d1213a0c16231299b764602d28
-lib/omx/libOMX.Exynos.VP8.Decoder.so|361618de5713f1bd1a913b60df412a126b2adac3
-lib/omx/libOMX.Exynos.VP8.Encoder.so|105cb491404b6dc051573286626883032ae4446d
-lib/omx/libOMX.Exynos.VP9.Decoder.so|63e617da91ccbe3c8dc31085d96ebdcfd0461dc6
-lib/omx/libOMX.Exynos.VP9.Encoder.so|c728d20cfef0eae5062c7cea6f701954910ee27b
-lib/omx/libOMX.Exynos.WMV.Decoder.so|ab55ba217bfe8f04e4cc1bb334becf759b9ebb8e
-lib64/libExynosOMX_Core.so|1930d402bb3b0851c54ad692b40bc827472735b6
-lib64/libExynosOMX_Resourcemanager.so|29cec59bd003ea9c8c4b73f34f04ec9f4811dd2b
-lib64/omx/libOMX.Exynos.AVC.Decoder.so|00f796a6029f1bb259338397a059cb6ad6bf3527
-lib64/omx/libOMX.Exynos.AVC.Encoder.so|5e1f00d020dafbcfa840c392bb34a4c7428ea5da
-lib64/omx/libOMX.Exynos.HEVC.Decoder.so|7c4c3f8d78acda3c089fd768079adf80fbb980da
-lib64/omx/libOMX.Exynos.HEVC.Encoder.so|b7e3a17279fd6bd8709b5b07a47ffe1071783cde
-lib64/omx/libOMX.Exynos.MPEG4.Decoder.so|83838f4a80065523803ac1e229b4d446a2fb3a5f
-lib64/omx/libOMX.Exynos.MPEG4.Encoder.so|5e3b8298fda307be47c227ca2454457ce6b36359
-lib64/omx/libOMX.Exynos.VP8.Decoder.so|ce1d0a9cd1f044fc01c1787081f1f60a8470fb12
-lib64/omx/libOMX.Exynos.VP8.Encoder.so|8d1fc2c7c14583ca4b17bbce000c9ddc2a46646b
-lib64/omx/libOMX.Exynos.VP9.Decoder.so|8010be2f8b5f6c44a2158fff7380efed6775f236
-lib64/omx/libOMX.Exynos.VP9.Encoder.so|c2ccf83df5e6e50a8d9da098355bed10e46aba26
-lib64/omx/libOMX.Exynos.WMV.Decoder.so|1b72f3285efdd7aed21383f1e46afff763c1c15a
-
 # Radio - RIL
 etc/mtu-conf.xml
 lib/libsecnativefeature.so
@@ -367,12 +339,6 @@ vendor/lib/sensors.sensorhub.so
 vendor/lib64/sensors.bio.so
 vendor/lib64/sensors.grip.so
 vendor/lib64/sensors.sensorhub.so
-
-# Surface Composer - from G930KKKU3ETG2
-lib/hw/gralloc.exynos5.so|7247ef681154851a9e0075c45d351271ac9c4ee1
-lib/libGrallocWrapper.so|7d0d9ef3edba98a98ba19b8dc127cf8c26a08073
-lib64/libGrallocWrapper.so|ec43e9861a0a3ca45ed37c84a94b1905f0607dec
-lib64/hw/gralloc.exynos5.so|ec43e9861a0a3ca45ed37c84a94b1905f0607dec
 
 # Wifi
 vendor/bin/hw/macloader
