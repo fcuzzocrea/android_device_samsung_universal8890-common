@@ -55,6 +55,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/ld.config.txt:$(TARGET_COPY_OUT_VENDOR)/etc/swcodec/ld.config.txt
 
+# efs prop set
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/ril_config.sh:$(TARGET_COPY_OUT_VENDOR)/etc/ril_config.sh
+
 # Atrace HAL
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service.universal8890
