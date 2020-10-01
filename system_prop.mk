@@ -31,6 +31,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwc.otf=1 \
     debug.hwc.winupdate=1 \
     debug.sf.disable_backpressure=1 \
+    debug.sf.disable_hwc=1 \
     debug.sf.early_phase_offset_ns=11600000 \
     debug.sf.early_app_phase_offset_ns=11600000 \
     debug.sf.early_gl_phase_offset_ns=3000000 \
