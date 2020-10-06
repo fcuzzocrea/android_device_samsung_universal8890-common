@@ -337,5 +337,3 @@ vendor/etc/wifi/bcmdhd_sta.bin_c0_plus_blob
 vendor/etc/wifi/indoorchannel.info
 vendor/etc/wifi/nvram.txt_c0_plus
 vendor/etc/wifi/nvram.txt_murata_c0_plus
-vendor/lib/libwifi-hal.so
-vendor/lib64/libwifi-hal.so
