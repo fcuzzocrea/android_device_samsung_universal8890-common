@@ -1430,11 +1430,11 @@
 	</path>
 
 	<!-- camcorder input -->
-	<!-- path name="camcorder-mic">
+	<path name="camcorder-mic">
 		<path name="capture_channel_invert" />
 		<path name="main-mic" />
 		<path name="2nd-mic" />
-	</path> -->
+	</path>
 
 	<path name="camcorder-headset-mic">
 		<path name="media-headset-mic" />
