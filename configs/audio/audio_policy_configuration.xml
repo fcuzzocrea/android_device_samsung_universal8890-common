@@ -97,7 +97,8 @@
                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_MONO"/>
                 </devicePort>
                 <devicePort tagName="Speaker" role="sink" type="AUDIO_DEVICE_OUT_SPEAKER">
-                   samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                  <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                            samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                    <gains>
                         <gain name="gain_1" mode="AUDIO_GAIN_MODE_JOINT"
                               minValueMB="-8400"
